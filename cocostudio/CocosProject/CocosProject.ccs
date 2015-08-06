@@ -1,0 +1,82 @@
+<Solution>
+  <PropertyGroup Name="CocosProject" Version="2.3.1.1" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Project Name="ccs_Login.csd" Type="Layer" />
+        <Folder Name="fonts">
+          <TTF Name="han.ttf" />
+        </Folder>
+        <Folder Name="ui">
+          <Image Name="bg_main.png" />
+          <Image Name="bg_log.png" />
+          <Image Name="button_login1.png" />
+          <Image Name="button_login2.png" />
+          <Image Name="button_login_sina1.png" />
+          <Image Name="button_login_sina2.png" />
+          <Image Name="button_login_weixin1.png" />
+          <Image Name="button_login_weixin2.png" />
+          <Image Name="button_yellow_small1.png" />
+          <Image Name="button_yellow_small2.png" />
+          <Image Name="image_login.png" />
+          <Image Name="button_close1.png" />
+          <Image Name="button_close2.png" />
+          <Image Name="button_return1.png" />
+          <Image Name="button_return2.png" />
+          <Image Name="image_eyeClose1.png" />
+          <Image Name="image_eyeClose2.png" />
+          <Image Name="image_reg.png" />
+          <Image Name="button_yellow_big1.png" />
+          <Image Name="button_yellow_big2.png" />
+          <Image Name="button_yellow_xiao1.png" />
+          <Image Name="button_yellow_xiao2.png" />
+          <Image Name="check_read.png" />
+          <Image Name="check_read1.png" />
+          <Image Name="image_logo1.png" />
+          <Image Name="image_ok.png" />
+          <Image Name="image_warring.png" />
+          <Image Name="button_login_big1.png" />
+          <Image Name="button_login_big2.png" />
+          <Image Name="button_yellow_into1.png" />
+          <Image Name="button_yellow_into2.png" />
+          <Image Name="button_yellow_pay1.png" />
+          <Image Name="button_yellow_pay2.png" />
+        </Folder>
+        <Project Name="ccs_reg.csd" Type="Layer" />
+        <Project Name="ccs_main.csd" Type="Layer" />
+        <Folder Name="bg">
+          <Image Name="bg1.png" />
+          <Image Name="bg2.png" />
+          <Image Name="bg3.png" />
+          <Image Name="bg4.png" />
+          <Image Name="bg5.png" />
+          <Image Name="bg6.png" />
+        </Folder>
+        <Folder Name="head">
+          <Image Name="head_0_0.png" />
+          <Image Name="head_0_1.png" />
+          <Image Name="head_0_2.png" />
+          <Image Name="head_0_3.png" />
+          <Image Name="head_0_4.png" />
+          <Image Name="head_0_5.png" />
+          <Image Name="head_1_0.png" />
+          <Image Name="head_1_1.png" />
+          <Image Name="head_1_2.png" />
+          <Image Name="head_1_3.png" />
+          <Image Name="head_1_4.png" />
+          <Image Name="head_1_5.png" />
+          <Image Name="head_lv_0.png" />
+          <Image Name="head_lv_1.png" />
+          <Image Name="head_lv_2.png" />
+          <Image Name="head_lv_3.png" />
+          <Image Name="head_lv_4.png" />
+          <Image Name="head_lv_5.png" />
+          <Image Name="head_lv_6.png" />
+        </Folder>
+        <Project Name="ccs_userInfo.csd" Type="Layer" />
+        <Project Name="ccs_widget_game.csd" Type="Layer" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

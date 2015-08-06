@@ -1,0 +1,439 @@
+{
+  "ID": "a2ee0952-26b5-49ae-8bf9-4f1d6279b798",
+  "Version": "2.3.1.1",
+  "Name": "MainScene",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 320.0,
+              "Y": 480.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.0016,
+              "Y": 0.001
+            },
+            "LeftMargin": 320.0,
+            "RightMargin": 319.0,
+            "TopMargin": 479.0,
+            "BottomMargin": 480.0,
+            "Tag": 231,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Default",
+                  "Path": "Default/Sprite.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": -319.5,
+                "RightMargin": -319.5,
+                "TopMargin": -479.5,
+                "BottomMargin": -479.5,
+                "Tag": 5,
+                "ActionTag": -620272433,
+                "Size": {
+                  "X": 46.0,
+                  "Y": 46.0
+                },
+                "Name": "Default",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 13,
+                "Scale9OriginY": 13,
+                "Scale9Width": 14,
+                "Scale9Height": 15,
+                "VisibleForFrame": false,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": -0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": -135.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": -135.0
+                },
+                "PreSize": {
+                  "X": 400.0,
+                  "Y": 55.0
+                },
+                "LeftMargin": -200.0,
+                "RightMargin": -199.0,
+                "TopMargin": 53.5,
+                "BottomMargin": -107.5,
+                "Tag": 230,
+                "Children": [
+                  {
+                    "FontSize": 35,
+                    "IsCustomSize": true,
+                    "LabelText": "",
+                    "PlaceHolderText": "请输入用户名。",
+                    "MaxLengthText": 10,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 10.0,
+                      "Y": 27.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.025,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 1.0,
+                      "Y": 0.7273
+                    },
+                    "LeftMargin": 10.0,
+                    "RightMargin": -10.0,
+                    "TopMargin": 7.5,
+                    "BottomMargin": 7.5,
+                    "Tag": 232,
+                    "ActionTag": -2041847643,
+                    "Size": {
+                      "X": 400.0,
+                      "Y": 40.0
+                    },
+                    "Name": "TextField_1",
+                    "ctype": "TextFieldObjectData"
+                  }
+                ],
+                "ActionTag": -1393411245,
+                "Size": {
+                  "X": 400.0,
+                  "Y": 55.0
+                },
+                "Name": "Image_input",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 13,
+                "Scale9OriginY": 13,
+                "Scale9Width": 14,
+                "Scale9Height": 15,
+                "VisibleForFrame": false,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": -0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": -240.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": -240.0
+                },
+                "PreSize": {
+                  "X": 400.0,
+                  "Y": 55.0
+                },
+                "LeftMargin": -200.0,
+                "RightMargin": -199.0,
+                "TopMargin": 158.5,
+                "BottomMargin": -212.5,
+                "Tag": 233,
+                "Children": [
+                  {
+                    "FontSize": 35,
+                    "IsCustomSize": true,
+                    "LabelText": "",
+                    "PlaceHolderText": "请输入密码。",
+                    "MaxLengthText": 10,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 10.0,
+                      "Y": 27.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.025,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 1.0,
+                      "Y": 0.7273
+                    },
+                    "LeftMargin": 10.0,
+                    "RightMargin": -10.0,
+                    "TopMargin": 7.5,
+                    "BottomMargin": 7.5,
+                    "Tag": 234,
+                    "ActionTag": 1821640930,
+                    "Size": {
+                      "X": 400.0,
+                      "Y": 40.0
+                    },
+                    "Name": "TextField_1",
+                    "ctype": "TextFieldObjectData"
+                  }
+                ],
+                "ActionTag": -770874266,
+                "Size": {
+                  "X": 400.0,
+                  "Y": 55.0
+                },
+                "Name": "Image_input_0",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 30,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Normal.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 118,
+                "Scale9Height": 49,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": -400.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": -400.0
+                },
+                "PreSize": {
+                  "X": 148.0,
+                  "Y": 71.0
+                },
+                "LeftMargin": -74.0,
+                "RightMargin": -73.0,
+                "TopMargin": 365.5,
+                "BottomMargin": -435.5,
+                "Tag": 235,
+                "ActionTag": 156997963,
+                "Size": {
+                  "X": 46.0,
+                  "Y": 36.0
+                },
+                "Name": "Button_login",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 50,
+                "LabelText": "武汉麻将",
+                "OutlineSize": 4,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowOffsetX": 5.0,
+                "ShadowOffsetY": -5.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": -83.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "Rotation": 8.0,
+                "RotationSkewX": 8.0,
+                "CColor": {
+                  "R": 113,
+                  "G": 198,
+                  "B": 113
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": -83.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -100.0,
+                "RightMargin": -99.0,
+                "TopMargin": 54.5,
+                "BottomMargin": -112.5,
+                "Tag": 175,
+                "ActionTag": -695431072,
+                "Size": {
+                  "X": 205.0,
+                  "Y": 67.0
+                },
+                "Name": "Text_1",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 1922092122,
+            "Size": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Name": "Panel_center",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 640.0,
+          "Y": 960.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "Default/Button_Normal.png",
+        "Default/ImageFile.png",
+        "Default/Sprite.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Scene"
+}
