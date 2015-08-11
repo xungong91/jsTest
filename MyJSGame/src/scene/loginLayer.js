@@ -5,12 +5,22 @@
 var loginLayer = BaseTestLayer.extend({
     ctor: function () {
         this._super();
+        mo.runLayerName =
+        {
+            name : "loginLayer",
+            ptr : this
+        };
+        
         var file = "res/cocostudio/ccs_Login.json";
         cc.log("ccs.load : %s", file);
         var json = ccs.load(file);
         this.ccsNode = json.node;
         this.addChild(this.ccsNode);
         this.resetSize(this.ccsNode);
+
+        //back button
+        var Button_back = ccui.helper.seekWidgetByName(this.ccsNode, "Button_back");
+        Button_back.addTouchEventListener(this.touchBackEvent,this);
 
         //login button
         var Button_login = ccui.helper.seekWidgetByName(this.ccsNode, "Button_login");
@@ -36,6 +46,11 @@ var loginLayer = BaseTestLayer.extend({
     onExit: function() {
         this._super();
     },
+    touchBackEvent: function (sender, type) {
+        if (type == ccui.Widget.TOUCH_ENDED){
+            mo.layerHelper.intoMainLayer();
+        }
+    },
     touchRegEvent: function (sender, type) {
         if (type == ccui.Widget.TOUCH_ENDED){
             mo.layerHelper.intoRegLayer();
@@ -53,14 +68,17 @@ var loginLayer = BaseTestLayer.extend({
             }
 
             //登录
-            pwd = hex_md5(pwd);
-            var post = "third_login_name=" + username + "&third_password=" + pwd;
+            var pwdmd5 = hex_md5(pwd);
+            var post = "third_login_name=" + username + "&third_password=" + pwdmd5;
 
             mo.httpRequestHelper.sendLogin(post,
             function (success){
                 if (success){
+
+                    //保存到本地
+                    mo.fileHelper.saveUserLogin(username, pwd);
+
                     mo.layerHelper.intoMainLayer();
-                    mo.httpRequestHelper.sendGetInfo();
                 }
                 else{
                     this.showLoginError("用户名或密码错误");

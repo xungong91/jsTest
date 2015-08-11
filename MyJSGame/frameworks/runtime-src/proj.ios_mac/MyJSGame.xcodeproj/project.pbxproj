@@ -72,9 +72,11 @@
 		D6B061241803AB9F0077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B061231803AB9F0077942B /* CoreMotion.framework */; };
 		EA9943CE1B72ED1B00D9FF06 /* GamesHall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9943C91B72ED1B00D9FF06 /* GamesHall.cpp */; };
 		EA9943CF1B72ED1B00D9FF06 /* GamesHall.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA9943CC1B72ED1B00D9FF06 /* GamesHall.mm */; };
-		EA9943D31B72EEE600D9FF06 /* jsbHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9943D11B72EEE600D9FF06 /* jsbHelper.cpp */; };
 		EA9943F11B732DBB00D9FF06 /* CustomClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9943EF1B732DBB00D9FF06 /* CustomClass.cpp */; };
 		EA9943F41B732E1200D9FF06 /* jsb_cocos2dx_custom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9943F21B732E1200D9FF06 /* jsb_cocos2dx_custom.cpp */; };
+		EA9943F71B7337DE00D9FF06 /* CHttpImageSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9943F51B7337DE00D9FF06 /* CHttpImageSprite.cpp */; };
+		EA9943FA1B73387500D9FF06 /* CMjHttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9943F81B73387500D9FF06 /* CMjHttpClient.cpp */; };
+		EA9944001B733AB400D9FF06 /* GameHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9943FE1B733AB400D9FF06 /* GameHelper.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,12 +200,16 @@
 		EA9943C91B72ED1B00D9FF06 /* GamesHall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamesHall.cpp; sourceTree = "<group>"; };
 		EA9943CA1B72ED1B00D9FF06 /* GamesHall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesHall.h; sourceTree = "<group>"; };
 		EA9943CC1B72ED1B00D9FF06 /* GamesHall.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GamesHall.mm; sourceTree = "<group>"; };
-		EA9943D11B72EEE600D9FF06 /* jsbHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jsbHelper.cpp; sourceTree = "<group>"; };
-		EA9943D21B72EEE600D9FF06 /* jsbHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsbHelper.h; sourceTree = "<group>"; };
 		EA9943EF1B732DBB00D9FF06 /* CustomClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomClass.cpp; sourceTree = "<group>"; };
 		EA9943F01B732DBB00D9FF06 /* CustomClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomClass.h; sourceTree = "<group>"; };
 		EA9943F21B732E1200D9FF06 /* jsb_cocos2dx_custom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jsb_cocos2dx_custom.cpp; path = "../../js-bindings/bindings/auto/jsb_cocos2dx_custom.cpp"; sourceTree = "<group>"; };
 		EA9943F31B732E1200D9FF06 /* jsb_cocos2dx_custom.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = jsb_cocos2dx_custom.hpp; path = "../../js-bindings/bindings/auto/jsb_cocos2dx_custom.hpp"; sourceTree = "<group>"; };
+		EA9943F51B7337DE00D9FF06 /* CHttpImageSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CHttpImageSprite.cpp; sourceTree = "<group>"; };
+		EA9943F61B7337DE00D9FF06 /* CHttpImageSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHttpImageSprite.h; sourceTree = "<group>"; };
+		EA9943F81B73387500D9FF06 /* CMjHttpClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CMjHttpClient.cpp; sourceTree = "<group>"; };
+		EA9943F91B73387500D9FF06 /* CMjHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMjHttpClient.h; sourceTree = "<group>"; };
+		EA9943FE1B733AB400D9FF06 /* GameHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameHelper.cpp; sourceTree = "<group>"; };
+		EA9943FF1B733AB400D9FF06 /* GameHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,11 +321,11 @@
 				1AC6FB34180E9ACB004C840B /* cocos2d_libs.xcodeproj */,
 				BAF426FA19484B3E002B22EF /* script */,
 				D4545214156E28EF00887EB5 /* Classes */,
+				15628F5B15F0F5C2000CF24B /* Resources */,
 				A92275401517C094001B78AA /* Frameworks */,
 				D45446CC156DE73F00887EB5 /* ios */,
 				509D4ACA17EBB2BE00697056 /* mac */,
 				A922753E1517C094001B78AA /* Products */,
-				15628F5B15F0F5C2000CF24B /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -419,8 +425,12 @@
 		EA9943D01B72EECA00D9FF06 /* jsbHelper */ = {
 			isa = PBXGroup;
 			children = (
-				EA9943D11B72EEE600D9FF06 /* jsbHelper.cpp */,
-				EA9943D21B72EEE600D9FF06 /* jsbHelper.h */,
+				EA9943F81B73387500D9FF06 /* CMjHttpClient.cpp */,
+				EA9943F91B73387500D9FF06 /* CMjHttpClient.h */,
+				EA9943F51B7337DE00D9FF06 /* CHttpImageSprite.cpp */,
+				EA9943F61B7337DE00D9FF06 /* CHttpImageSprite.h */,
+				EA9943FE1B733AB400D9FF06 /* GameHelper.cpp */,
+				EA9943FF1B733AB400D9FF06 /* GameHelper.h */,
 			);
 			path = jsbHelper;
 			sourceTree = "<group>";
@@ -609,11 +619,13 @@
 				509D4AC917EBB2AB00697056 /* RootViewController.mm in Sources */,
 				EA9943F11B732DBB00D9FF06 /* CustomClass.cpp in Sources */,
 				D4545227156E28EF00887EB5 /* AppDelegate.cpp in Sources */,
+				EA9943FA1B73387500D9FF06 /* CMjHttpClient.cpp in Sources */,
+				EA9944001B733AB400D9FF06 /* GameHelper.cpp in Sources */,
 				EA9943CE1B72ED1B00D9FF06 /* GamesHall.cpp in Sources */,
 				509D4AC817EBB2AB00697056 /* main.m in Sources */,
+				EA9943F71B7337DE00D9FF06 /* CHttpImageSprite.cpp in Sources */,
 				EA9943F41B732E1200D9FF06 /* jsb_cocos2dx_custom.cpp in Sources */,
 				509D4ABC17EBB2AB00697056 /* AppController.mm in Sources */,
-				EA9943D31B72EEE600D9FF06 /* jsbHelper.cpp in Sources */,
 				EA9943CF1B72ED1B00D9FF06 /* GamesHall.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,7 +772,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
-				PROVISIONING_PROFILE = "6f21d6c9-00f3-4a60-9f97-27c51b217952";
+				PROVISIONING_PROFILE = "ff1ef67c-f9a2-40d9-8992-ebc04e2cafd1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/platform/ios $(SRCROOT)/../../js-bindings/external/spidermonkey/include/ios $(SRCROOT)/../../js-bindings/cocos2d-x/plugin/jsbindings/auto $(SRCROOT)/../../js-bindings/cocos2d-x/plugin/jsbindings/manual";
@@ -787,7 +799,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
-				PROVISIONING_PROFILE = "6f21d6c9-00f3-4a60-9f97-27c51b217952";
+				PROVISIONING_PROFILE = "ff1ef67c-f9a2-40d9-8992-ebc04e2cafd1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../js-bindings/cocos2d-x/cocos/platform/ios $(SRCROOT)/../../js-bindings/external/spidermonkey/include/ios $(SRCROOT)/../../js-bindings/cocos2d-x/plugin/jsbindings/auto $(SRCROOT)/../../js-bindings/cocos2d-x/plugin/jsbindings/manual";

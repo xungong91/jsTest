@@ -1,0 +1,994 @@
+{
+  "ID": "9bbaf34b-4879-4827-839b-3e014a1075a5",
+  "Version": "2.3.1.1",
+  "Name": "ccs_widget_user",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 84,
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "bg/bg5.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 546,
+            "Scale9Height": 484,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Tag": 85,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "ui/button_yellow_into2.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "ui/button_yellow_into1.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 202,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 273.0,
+                  "Y": 27.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.0558
+                },
+                "PreSize": {
+                  "X": 0.4249,
+                  "Y": 0.1364
+                },
+                "LeftMargin": 157.0,
+                "RightMargin": 157.0,
+                "TopMargin": 424.0,
+                "BottomMargin": -6.0,
+                "Tag": 86,
+                "Children": [
+                  {
+                    "FontSize": 20,
+                    "LabelText": "累计获得实物奖励",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/han.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 34,
+                      "G": 34,
+                      "B": 34
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 102,
+                      "G": 26,
+                      "B": 0
+                    },
+                    "ShadowOffsetX": -1.0,
+                    "ShadowOffsetY": -2.0,
+                    "ShadowEnabled": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 116.0,
+                      "Y": 39.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "B": 191
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5909
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 34.5,
+                    "RightMargin": 34.5,
+                    "TopMargin": 13.5,
+                    "BottomMargin": 25.5,
+                    "Tag": 87,
+                    "ActionTag": -779899143,
+                    "Size": {
+                      "X": 163.0,
+                      "Y": 27.0
+                    },
+                    "Name": "Text_5",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -388323813,
+                "Size": {
+                  "X": 232.0,
+                  "Y": 66.0
+                },
+                "Name": "Button_prize",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 30,
+                "LabelText": "0",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 4.0,
+                "ShadowOffsetY": -4.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 190.0,
+                  "Y": 410.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.348,
+                  "Y": 0.8471
+                },
+                "PreSize": {
+                  "X": 0.5495,
+                  "Y": 0.0806
+                },
+                "LeftMargin": 190.0,
+                "RightMargin": 56.0,
+                "TopMargin": 54.5,
+                "BottomMargin": 390.5,
+                "Tag": 111,
+                "ActionTag": -1265426837,
+                "Size": {
+                  "X": 300.0,
+                  "Y": 39.0
+                },
+                "Name": "Text_coin",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 30,
+                "LabelText": "0",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 4.0,
+                "ShadowOffsetY": -4.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 190.0,
+                  "Y": 352.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.348,
+                  "Y": 0.7273
+                },
+                "PreSize": {
+                  "X": 0.5495,
+                  "Y": 0.0806
+                },
+                "LeftMargin": 190.0,
+                "RightMargin": 56.0,
+                "TopMargin": 112.5,
+                "BottomMargin": 332.5,
+                "Tag": 112,
+                "ActionTag": -1582258854,
+                "Size": {
+                  "X": 300.0,
+                  "Y": 39.0
+                },
+                "Name": "Text_tickets",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 30,
+                "LabelText": "0",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 4.0,
+                "ShadowOffsetY": -4.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 190.0,
+                  "Y": 295.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.348,
+                  "Y": 0.6095
+                },
+                "PreSize": {
+                  "X": 0.5495,
+                  "Y": 0.0806
+                },
+                "LeftMargin": 190.0,
+                "RightMargin": 56.0,
+                "TopMargin": 169.5,
+                "BottomMargin": 275.5,
+                "Tag": 113,
+                "ActionTag": -1144454334,
+                "Size": {
+                  "X": 300.0,
+                  "Y": 39.0
+                },
+                "Name": "Text_coupons",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 14,
+                "LabelText": "无记录",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -3.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 140.0,
+                  "Y": 179.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2564,
+                  "Y": 0.3698
+                },
+                "PreSize": {
+                  "X": 0.1832,
+                  "Y": 0.0413
+                },
+                "LeftMargin": 140.0,
+                "RightMargin": 306.0,
+                "TopMargin": 295.0,
+                "BottomMargin": 169.0,
+                "Tag": 114,
+                "ActionTag": 1388198051,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 20.0
+                },
+                "Name": "Text_match0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 14,
+                "LabelText": "无记录",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -3.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 140.0,
+                  "Y": 150.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2564,
+                  "Y": 0.3099
+                },
+                "PreSize": {
+                  "X": 0.1832,
+                  "Y": 0.0413
+                },
+                "LeftMargin": 140.0,
+                "RightMargin": 306.0,
+                "TopMargin": 324.0,
+                "BottomMargin": 140.0,
+                "Tag": 115,
+                "ActionTag": 511314345,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 20.0
+                },
+                "Name": "Text_match1",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 14,
+                "LabelText": "无记录",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -3.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 140.0,
+                  "Y": 121.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2564,
+                  "Y": 0.25
+                },
+                "PreSize": {
+                  "X": 0.1832,
+                  "Y": 0.0413
+                },
+                "LeftMargin": 140.0,
+                "RightMargin": 306.0,
+                "TopMargin": 353.0,
+                "BottomMargin": 111.0,
+                "Tag": 116,
+                "ActionTag": 1146986183,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 20.0
+                },
+                "Name": "Text_match2",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 14,
+                "LabelText": "无记录",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -3.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 140.0,
+                  "Y": 92.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2564,
+                  "Y": 0.1901
+                },
+                "PreSize": {
+                  "X": 0.1832,
+                  "Y": 0.0413
+                },
+                "LeftMargin": 140.0,
+                "RightMargin": 306.0,
+                "TopMargin": 382.0,
+                "BottomMargin": 82.0,
+                "Tag": 117,
+                "ActionTag": 374597420,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 20.0
+                },
+                "Name": "Text_match3",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 14,
+                "LabelText": "无排名",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -3.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 400.0,
+                  "Y": 179.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7326,
+                  "Y": 0.3698
+                },
+                "PreSize": {
+                  "X": 0.1832,
+                  "Y": 0.0413
+                },
+                "LeftMargin": 400.0,
+                "RightMargin": 46.0,
+                "TopMargin": 295.0,
+                "BottomMargin": 169.0,
+                "Tag": 118,
+                "ActionTag": -2017930750,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 20.0
+                },
+                "Name": "Text_rank0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 14,
+                "LabelText": "无排名",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -3.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 400.0,
+                  "Y": 137.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7326,
+                  "Y": 0.2831
+                },
+                "PreSize": {
+                  "X": 0.1832,
+                  "Y": 0.0413
+                },
+                "LeftMargin": 400.0,
+                "RightMargin": 46.0,
+                "TopMargin": 337.0,
+                "BottomMargin": 127.0,
+                "Tag": 119,
+                "ActionTag": -768196484,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 20.0
+                },
+                "Name": "Text_rank1",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 14,
+                "LabelText": "无排名",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/han.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 51,
+                  "B": 102
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -3.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 400.0,
+                  "Y": 94.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7326,
+                  "Y": 0.1942
+                },
+                "PreSize": {
+                  "X": 0.1832,
+                  "Y": 0.0413
+                },
+                "LeftMargin": 400.0,
+                "RightMargin": 46.0,
+                "TopMargin": 380.0,
+                "BottomMargin": 84.0,
+                "Tag": 120,
+                "ActionTag": -1606324386,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 20.0
+                },
+                "Name": "Text_rank2",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -1091967240,
+            "Size": {
+              "X": 546.0,
+              "Y": 484.0
+            },
+            "Name": "Panel_game",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "bg/bg6.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 546,
+            "Scale9Height": 484,
+            "VisibleForFrame": false,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Tag": 88,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "ui/button_yellow_into2.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "ui/button_yellow_into1.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 202,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 273.0,
+                  "Y": 27.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.0558
+                },
+                "PreSize": {
+                  "X": 0.4249,
+                  "Y": 0.1364
+                },
+                "LeftMargin": 157.0,
+                "RightMargin": 157.0,
+                "TopMargin": 424.0,
+                "BottomMargin": -6.0,
+                "Tag": 89,
+                "Children": [
+                  {
+                    "FontSize": 20,
+                    "LabelText": "游戏成就",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/han.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 34,
+                      "G": 34,
+                      "B": 34
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 102,
+                      "G": 26,
+                      "B": 0
+                    },
+                    "ShadowOffsetX": -1.0,
+                    "ShadowOffsetY": -2.0,
+                    "ShadowEnabled": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 116.0,
+                      "Y": 39.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "B": 191
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5909
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 74.5,
+                    "RightMargin": 74.5,
+                    "TopMargin": 13.5,
+                    "BottomMargin": 25.5,
+                    "Tag": 90,
+                    "ActionTag": 1844988645,
+                    "Size": {
+                      "X": 83.0,
+                      "Y": 27.0
+                    },
+                    "Name": "Text_5",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 479211399,
+                "Size": {
+                  "X": 232.0,
+                  "Y": 66.0
+                },
+                "Name": "Button_game",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1949890528,
+            "Size": {
+              "X": 546.0,
+              "Y": 484.0
+            },
+            "Name": "Panel_prize",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 546.0,
+          "Y": 484.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "bg/bg5.png",
+        "bg/bg6.png",
+        "Default/Button_Disable.png",
+        "fonts/han.ttf",
+        "ui/button_yellow_into1.png",
+        "ui/button_yellow_into2.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

@@ -16,19 +16,34 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="ui/bg_main.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_log" ActionTag="-1154059580" Tag="306" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="TopEdge" LeftMargin="103.0000" RightMargin="103.0000" TopMargin="25.5000" BottomMargin="705.5000" Scale9Width="434" Scale9Height="229" ctype="ImageViewObjectData">
-            <Size X="434.0000" Y="229.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="320.0000" Y="820.0000" />
+          <AbstractNodeData Name="Button_back" ActionTag="-1119220700" Tag="142" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="10.0000" RightMargin="570.0000" TopMargin="10.0000" BottomMargin="902.0000" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="30" Scale9Height="26" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="60.0000" Y="48.0000" />
+            <AnchorPoint ScaleY="1.0000" />
+            <Position X="10.0000" Y="950.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.8542" />
-            <PreSize X="434.0000" Y="229.0000" />
-            <FileData Type="Normal" Path="ui/bg_log.png" Plist="" />
+            <PrePosition X="0.0156" Y="0.9896" />
+            <PreSize X="0.0938" Y="0.0500" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+            <PressedFileData Type="Normal" Path="ui/button_return2.png" Plist="" />
+            <NormalFileData Type="Normal" Path="ui/button_return1.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
           <AbstractNodeData Name="Panel_center" ActionTag="323004413" Tag="179" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="320.0000" RightMargin="319.0000" TopMargin="479.0000" BottomMargin="480.0000" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
             <Size X="1.0000" Y="1.0000" />
             <Children>
+              <AbstractNodeData Name="Image_log" ActionTag="-1154059580" Tag="306" IconVisible="False" LeftMargin="-216.5000" RightMargin="-216.5000" TopMargin="-456.5000" BottomMargin="228.5000" Scale9Width="434" Scale9Height="229" ctype="ImageViewObjectData">
+                <Size X="434.0000" Y="229.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="0.5000" Y="343.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.5000" Y="343.0000" />
+                <PreSize X="434.0000" Y="229.0000" />
+                <FileData Type="Normal" Path="ui/bg_log.png" Plist="" />
+              </AbstractNodeData>
               <AbstractNodeData Name="Text_title" ActionTag="1425219664" Tag="27" IconVisible="False" LeftMargin="-216.0000" RightMargin="-215.0000" TopMargin="-212.0000" BottomMargin="177.0000" FontSize="16" LabelText="温馨提示：如果您已经在无门的官网16youxi.com或手机app&#xA;新蜂武汉麻将中注册为我们的用户，可以使用已有账号登录。" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="432.0000" Y="36.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -117,7 +132,7 @@
               <AbstractNodeData Name="Image_inputError" ActionTag="79633625" Tag="26" VisibleForFrame="False" IconVisible="False" LeftMargin="-215.5000" RightMargin="185.5000" TopMargin="11.0000" BottomMargin="-42.0000" Scale9Width="31" Scale9Height="32" ctype="ImageViewObjectData">
                 <Size X="31.0000" Y="32.0000" />
                 <Children>
-                  <AbstractNodeData Name="Text_inputError" ActionTag="-1692299678" Tag="50" IconVisible="False" LeftMargin="40.0000" RightMargin="-105.0000" TopMargin="9.0000" BottomMargin="5.0000" FontSize="16" LabelText="用户名或密码不能为空" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="Text_inputError" ActionTag="-1692299678" Tag="50" IconVisible="False" LeftMargin="40.0000" RightMargin="-169.0000" TopMargin="9.0000" BottomMargin="5.0000" FontSize="16" LabelText="用户名或密码不能为空" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="160.0000" Y="18.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="40.0000" Y="14.0000" />

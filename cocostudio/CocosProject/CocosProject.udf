@@ -31,11 +31,13 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
+          <FilePathData Path="ccs_widget_user.csd" />
+          <FilePathData Path="ccs_userInfo.csd" />
+          <FilePathData Path="ccs_widget_game.csd" />
+          <FilePathData Path="ccs_gameInfo.csd" />
           <FilePathData Path="ccs_Login.csd" />
           <FilePathData Path="ccs_reg.csd" />
-          <FilePathData Path="ccs_userInfo.csd" />
           <FilePathData Path="ccs_main.csd" />
-          <FilePathData Path="ccs_widget_game.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="ccs_main.csd" />
       </Value>

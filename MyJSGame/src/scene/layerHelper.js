@@ -20,11 +20,6 @@ var layerHelper = function (){
         mo.mainScene.addChild(new mainLayer());
     };
 
-    that.intoUserInfoLayer = function (){
-        mo.mainScene.removeAllChildren();
-        mo.mainScene.addChild(new userInfoLayer());
-    };
-
     return that;
 };
 

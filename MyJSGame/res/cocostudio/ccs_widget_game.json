@@ -22,6 +22,7 @@
             },
             "Scale9Width": 613,
             "Scale9Height": 146,
+            "TouchEnable": true,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
@@ -91,7 +92,7 @@
               },
               {
                 "FontSize": 16,
-                "LabelText": "当前在线：1000\n\n版本号：\n1.4.5",
+                "LabelText": "拥有玩家：1000\n\n版本号：\n1.4.5",
                 "FontResource": {
                   "Type": "Normal",
                   "Path": "fonts/han.ttf",
@@ -278,13 +279,15 @@
                 "Tag": 60,
                 "Children": [
                   {
-                    "FontSize": 20,
-                    "LabelText": "充值",
+                    "FontSize": 18,
+                    "LabelText": "进入武汉麻将",
                     "FontResource": {
                       "Type": "Normal",
                       "Path": "fonts/han.ttf",
                       "Plist": ""
                     },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
                     "OutlineSize": 2,
                     "OutlineColor": {
                       "R": 34,
@@ -321,18 +324,18 @@
                       "Y": 0.5846
                     },
                     "PreSize": {
-                      "X": 0.0,
-                      "Y": 0.0
+                      "X": 0.7,
+                      "Y": 0.3846
                     },
-                    "LeftMargin": 58.0,
-                    "RightMargin": 58.0,
-                    "TopMargin": 13.5,
-                    "BottomMargin": 24.5,
+                    "LeftMargin": 24.0,
+                    "RightMargin": 24.0,
+                    "TopMargin": 14.5,
+                    "BottomMargin": 25.5,
                     "Tag": 61,
                     "ActionTag": -1134298036,
                     "Size": {
-                      "X": 44.0,
-                      "Y": 27.0
+                      "X": 112.0,
+                      "Y": 25.0
                     },
                     "Name": "Text_buton",
                     "ctype": "TextObjectData"

@@ -58,20 +58,50 @@
             "ctype": "ImageViewObjectData"
           },
           {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "ui/bg_log.png",
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
               "Plist": ""
             },
-            "Scale9Width": 434,
-            "Scale9Height": 229,
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "ui/button_return2.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "ui/button_return1.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 30,
+            "Scale9Height": 26,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
             "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
+              "ScaleY": 1.0
             },
             "Position": {
-              "X": 320.0,
-              "Y": 820.0
+              "X": 10.0,
+              "Y": 950.0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -80,27 +110,27 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.5,
-              "Y": 0.8542
+              "X": 0.0156,
+              "Y": 0.9896
             },
             "PreSize": {
-              "X": 434.0,
-              "Y": 229.0
+              "X": 0.0938,
+              "Y": 0.05
             },
-            "HorizontalEdge": "BothEdge",
+            "HorizontalEdge": "LeftEdge",
             "VerticalEdge": "TopEdge",
-            "LeftMargin": 103.0,
-            "RightMargin": 103.0,
-            "TopMargin": 25.5,
-            "BottomMargin": 705.5,
-            "Tag": 306,
-            "ActionTag": -1154059580,
+            "LeftMargin": 10.0,
+            "RightMargin": 570.0,
+            "TopMargin": 10.0,
+            "BottomMargin": 902.0,
+            "Tag": 142,
+            "ActionTag": -1119220700,
             "Size": {
-              "X": 434.0,
-              "Y": 229.0
+              "X": 60.0,
+              "Y": 48.0
             },
-            "Name": "Image_log",
-            "ctype": "ImageViewObjectData"
+            "Name": "Button_back",
+            "ctype": "ButtonObjectData"
           },
           {
             "BackColorAlpha": 102,
@@ -144,6 +174,49 @@
             "BottomMargin": 480.0,
             "Tag": 179,
             "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "ui/bg_log.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 434,
+                "Scale9Height": 229,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.5,
+                  "Y": 343.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 343.0
+                },
+                "PreSize": {
+                  "X": 434.0,
+                  "Y": 229.0
+                },
+                "LeftMargin": -216.5,
+                "RightMargin": -216.5,
+                "TopMargin": -456.5,
+                "BottomMargin": 228.5,
+                "Tag": 306,
+                "ActionTag": -1154059580,
+                "Size": {
+                  "X": 434.0,
+                  "Y": 229.0
+                },
+                "Name": "Image_log",
+                "ctype": "ImageViewObjectData"
+              },
               {
                 "FontSize": 16,
                 "LabelText": "温馨提示：如果您已经在无门的官网16youxi.com或手机app\n新蜂武汉麻将中注册为我们的用户，可以使用已有账号登录。",
@@ -614,7 +687,7 @@
                       "Y": 0.0
                     },
                     "LeftMargin": 40.0,
-                    "RightMargin": -105.0,
+                    "RightMargin": -169.0,
                     "TopMargin": 9.0,
                     "BottomMargin": 5.0,
                     "Tag": 50,
@@ -1144,6 +1217,8 @@
         "ui/button_login_weixin2.png",
         "ui/button_login1.png",
         "ui/button_login2.png",
+        "ui/button_return1.png",
+        "ui/button_return2.png",
         "ui/button_yellow_small1.png",
         "ui/button_yellow_small2.png",
         "ui/image_eyeClose1.png",

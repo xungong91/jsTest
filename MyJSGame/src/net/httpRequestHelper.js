@@ -17,14 +17,7 @@ var httpRequestHelper = function (){
             func(xhr);
         };
         var args = post;
-        if (mo.httpSessionid != null)
-        {
-            if (args != "")
-            {
-                args += "&";
-            }
-            args += ("sessionid=" + mo.httpSessionid);
-        }
+        cc.log("post" + args);
 
         xhr.open("POST", url);
         xhr.send(args);
@@ -44,10 +37,10 @@ var httpRequestHelper = function (){
         xhr.send();
     };
 
-    //登录
-    that.sendLogin = function (post, func, obj){
+    //注册
+    that.sendReg = function (post, func, obj){
         mo.waitLayerHelper.open();
-        that.sendPost(post, that.host + "/user/login/", function (xhr){
+        that.sendPost(post, that.host + "/user/register/", function (xhr){
             var isSuccess = false;
             mo.waitLayerHelper.close();
 
@@ -61,8 +54,6 @@ var httpRequestHelper = function (){
 
                 if (json.error == 0)
                 {
-                    mo.httpSessionid = json.data.session_key;
-                    cc.log(mo.httpSessionid);
                     isSuccess = true;
                 }
             }
@@ -71,35 +62,91 @@ var httpRequestHelper = function (){
         });
     };
 
-    //获取信息
-    that.sendGetInfo = function (){
+    //登录
+    that.sendLogin = function (post, func, obj){
         mo.waitLayerHelper.open();
-
-        that.sendPost("", that.host + "/user/info/", function (xhr){
+        that.sendPost(post, that.host + "/user/loginHall/", function (xhr){
+            var isSuccess = false;
             mo.waitLayerHelper.close();
 
             if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
                 var httpStatus = xhr.statusText;
                 var response = xhr.responseText;
 
-                var obj =  JSON.parse(response);
+                var json =  JSON.parse(response);
                 cc.log(httpStatus);
                 cc.log(response);
 
-                if (obj.error == 0)
+                if (json.error == 0)
                 {
-                    mo.userInfo.nickname = obj.data.nickname;
-                    mo.userInfo.login_name = obj.data.login_name;
-                    mo.userInfo.diamond = obj.data.profile.diamond;
+                    mo.games = json.data.games;
+                    cc.log(mo.games);
+
+                    mo.userInfo.userId = json.data.user_number + "";
+                    mo.userInfo.nickname = json.data.nickname;
+                    mo.userInfo.login_name = json.data.login_name;
+                    mo.userInfo.diamond = json.data.diamond;
+                    mo.userInfo.head = "head" + json.data.gender + "_" + json.data.avatar;
+                    isSuccess = true;
 
                     mo.eventHelper.dispatch("updataUserInfo");
+                }
+            }
+
+            func.call(obj, isSuccess);
+        });
+    };
+
+    //获取游戏用户信息
+    that.sendGetUserInfo = function (post, func, obj){
+        mo.waitLayerHelper.open();
+
+        that.sendPost(post, that.host + "/gateway/", function (xhr){
+            mo.waitLayerHelper.close();
+
+            if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+                var httpStatus = xhr.statusText;
+                var response = xhr.responseText;
+
+                var json =  JSON.parse(response);
+                cc.log(httpStatus);
+                cc.log(response);
+
+                if (json.error == 0)
+                {
+                    func.call(obj, json.data);
+                }
+            }
+        });
+    };
+
+    //获取游戏用户兑奖的实物
+    that.sendGetUserExchangeInfo = function (post, func, obj){
+        mo.waitLayerHelper.open();
+
+        that.sendPost(post, that.host + "/user/pyExchangeHistory/", function (xhr){
+            mo.waitLayerHelper.close();
+
+            if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
+                var httpStatus = xhr.statusText;
+                var response = xhr.responseText;
+                cc.log(httpStatus);
+                cc.log(response);
+
+                var json =  JSON.parse(response);
+                cc.log(httpStatus);
+                cc.log(response);
+
+                if (json.error == 0)
+                {
+                    func.call(obj, json.data);
                 }
             }
         });
     };
 
     //获取游戏列表
-    that.sendGetInfo = function (){
+    that.sendGetGameInfo = function (){
         mo.waitLayerHelper.open();
 
         that.sendPost("", that.host + "/server/lists/", function (xhr){
@@ -115,42 +162,11 @@ var httpRequestHelper = function (){
 
                 if (json.error == 0)
                 {
-                    mo.serverList = json.data;
+                    mo.serverList = json.data.servers;
+                    mo.acImages = json.data.ac_images;
 
                     mo.eventHelper.dispatch("updataSeverList");
                 }
-            }
-        });
-    };
-
-    //下载图片
-    that.sendGetImg = function (url){
-        that.sendGet(url, function (xhr){
-            if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status <= 207)) {
-                var httpStatus = xhr.statusText;
-                var response = xhr.responseText.substring(0, 100) + "...";
-
-                cc.log(httpStatus);
-                cc.log(response);
-
-
-                //var bytes = cc.loader.loadBinarySync(xhr.responseText);
-                //cc.log("阿弥陀佛" + bytes);
-
-                //cc.loader.loadImg(xhr.responseText, {isCrossOrigin : false}, function(err,img){
-                //    if(err){
-                //        cc.log(err);
-                //    }
-                //    else{
-                //        cc.log("ok");
-                //        var texture2d = new cc.Texture2D();
-                //        texture2d.initWithElement(img);
-                //        texture2d.handleLoadedTexture();
-                //        var logo = new cc.Sprite(texture2d);;
-                //        logo.setPosition(200,330)
-                //        mo.mainScene.addChild(logo, 2);
-                //    }
-                //});
             }
         });
     };
@@ -159,4 +175,5 @@ var httpRequestHelper = function (){
 };
 
 mo.httpSessionid = "";
+mo.games = null;
 mo.httpRequestHelper = new httpRequestHelper();

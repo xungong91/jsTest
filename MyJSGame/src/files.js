@@ -9,9 +9,11 @@ var jsFiles = [
     "src/scene/regLayer.js",
     "src/scene/mainLayer.js",
     "src/scene/userInfoLayer.js",
+    "src/scene/gameInfoLayer.js",
     "src/scene/waitLayer.js",
     "src/sprite/baseSprite.js",
     "src/sprite/roomMsgSprite.js",
+    "src/sprite/pageSelectSprite.js",
     "src/net/httpRequestHelper.js",
     "src/tools/md5.js",
     "src/tools/fileHelper.js",
@@ -20,5 +22,6 @@ var jsFiles = [
     "src/widget/baseWidget.js",
     "src/widget/gameWidget.js",
     "src/widget/gameNotWidget.js",
+    "src/widget/userWidget.js",
     "src/resource.js"
 ];

@@ -26,8 +26,11 @@ THE SOFTWARE.
 ****************************************************************************/
 package org.cocos2dx.javascript;
 
+import org.cocos2dx.javascript.MjmJni;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
+
+import android.os.Bundle;
 
 public class AppActivity extends Cocos2dxActivity {
 	
@@ -38,5 +41,11 @@ public class AppActivity extends Cocos2dxActivity {
         glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);
 
         return glSurfaceView;
+    }
+    
+    protected void onCreate(Bundle savedState){
+        super.onCreate(savedState);
+        
+        MjmJni.mMainContext = this;
     }
 }

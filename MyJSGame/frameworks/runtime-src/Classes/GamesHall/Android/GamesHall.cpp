@@ -8,7 +8,6 @@
 
 #include "GamesHall.h"
 #include "cocos2d.h"
-#include "CLogHelper.h"
 
 USING_NS_CC;
 
@@ -27,13 +26,13 @@ extern "C"
 bool GamesHall::openURL(const string &openUrl)
 {
     JniMethodInfo jmi;
-    if(JniHelper::getStaticMethodInfo(jmi , "org/cocos2dx/cpp/MjmJni" , "openURL" , "(Ljava/lang/String;)V"))
+    if(JniHelper::getStaticMethodInfo(jmi , "org/cocos2dx/javascript/MjmJni" , "openURL" , "(Ljava/lang/String;)Z"))
     {
         jstring str_reg = jmi.env->NewStringUTF(openUrl.c_str());
         
-        jmi.env->CallStaticVoidMethod(jmi.classID , jmi.methodID , str_reg);
+        jboolean b = jmi.env->CallStaticBooleanMethod(jmi.classID , jmi.methodID , str_reg);
         
-        return true;
+        return b;
     }
     else
     {

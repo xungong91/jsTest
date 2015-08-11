@@ -26,6 +26,5 @@ bool GamesHall::openURL(const string &openUrl)
 
 void GamesHall::openURLFail()
 {
-    cocos2d::MessageBox("未安装卡五星", "title");
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/cn/app/xin-feng-wu-han-ma-jiang/id917551498?l=zh&ls=1&mt=8"]];
 }

@@ -49,6 +49,21 @@ var fileHelper = function (){
         that.saveItem(key, b);
     };
 
+    that.saveUserLogin = function (name, pwd){
+        that.saveItem(that.keyUserName, name);
+        that.saveItem(that.keyUserPwd, pwd);
+    };
+
+    that.getUserLogin = function (){
+        var result = {};
+        result.name = that.readItem(that.keyUserName);
+        result.pwd = that.readItem(that.keyUserPwd);
+
+        cc.log(result.name);
+        cc.log(result.pwd);
+        return result;
+    };
+
     return that;
 };
 

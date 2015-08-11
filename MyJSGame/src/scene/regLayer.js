@@ -10,8 +10,13 @@ var regLayer = BaseTestLayer.extend({
 
     ctor: function () {
         this._super();
-        var node,
-            file = "res/cocostudio/ccs_reg.json";
+        mo.runLayerName =
+        {
+            name : "regLayer",
+            ptr : this
+        };
+
+        var file = "res/cocostudio/ccs_reg.json";
         cc.log("ccs.load : %s", file);
         var json = ccs.load(file);
         this.ccsNode = json.node;
@@ -45,7 +50,6 @@ var regLayer = BaseTestLayer.extend({
 
         //reg
         ccui.helper.seekWidgetByName(this.ccsNode, "Button_frist").addTouchEventListener(this.touchRegEvent,this);
-
     },
     onEnter: function () {
         this._super();
@@ -159,7 +163,9 @@ var regLayer = BaseTestLayer.extend({
     },
     touchRandomEvent: function (sender, type) {
         if (type == ccui.Widget.TOUCH_ENDED){
-            this.TextField_nick.setString("哈哈哈哈");
+            var jsbHelper = new cc.CustomClass();
+
+            this.TextField_nick.setString(jsbHelper.getRandomNick());
             this.checkInput();
         }
     },
@@ -178,8 +184,38 @@ var regLayer = BaseTestLayer.extend({
                 return;
             }
 
-            //发送消息
+            var username = this.TextField_name.getString();
+            var pwd = this.TextField_pwd.getString();
+            var md5pwd = hex_md5(this.TextField_pwd.getString());
 
+            //发送消息
+            var post = "login_name=" + this.TextField_name.getString();
+            post += "&nickname=" + this.TextField_nick.getString();
+            post += "&password=" + hex_md5(this.TextField_pwd.getString());
+            post += "&password1=" + hex_md5(this.TextField_pwd.getString());
+            post += "&area=" + 0;
+            post += "&gender=" + 0;
+
+            mo.httpRequestHelper.sendReg(post, function(success){
+                if (success){
+                    var post = "third_login_name=" + username + "&third_password=" + md5pwd;
+                    mo.httpRequestHelper.sendLogin(post,
+                        function (success){
+                            if (success){
+                                //保存到本地
+                                mo.fileHelper.saveUserLogin(username, pwd);
+
+                                mo.layerHelper.intoMainLayer();
+                            }
+                            else{
+                                this.showLoginError("用户名或密码错误");
+                            }
+                        }, this);
+                }
+                else{
+                    mo.roomMsgHelper.showMsg("注册失败");
+                }
+            }, this);
         }
     }
 });

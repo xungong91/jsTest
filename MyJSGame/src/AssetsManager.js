@@ -11,8 +11,6 @@ var AssetsManagerLoaderScene = cc.Scene.extend({
     _percentTimer:null,
 
     run:function(){
-        this.loadGame();
-        return;
         if (!cc.sys.isNative) {
             this.loadGame();
             return;

@@ -27,6 +27,20 @@ var gameHelper = function (){
         return true;
     };
 
+    that.getValueForIitems = function (id, items, items_num){
+        var value = 0;
+        var s1 = items.split(",");
+        var s2 = items_num.split(",");
+
+        for(var i = 0; i < s1.length; i++){
+            if (s1[i] == id){
+                value = s2[i];
+                break;
+            }
+        }
+        return value;
+    };
+
     return that;
 };
 

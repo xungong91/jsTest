@@ -42,6 +42,8 @@
           <Image Name="button_yellow_into2.png" />
           <Image Name="button_yellow_pay1.png" />
           <Image Name="button_yellow_pay2.png" />
+          <Image Name="page_select1.png" />
+          <Image Name="page_select2.png" />
         </Folder>
         <Project Name="ccs_reg.csd" Type="Layer" />
         <Project Name="ccs_main.csd" Type="Layer" />
@@ -52,6 +54,7 @@
           <Image Name="bg4.png" />
           <Image Name="bg5.png" />
           <Image Name="bg6.png" />
+          <Image Name="bg7.png" />
         </Folder>
         <Folder Name="head">
           <Image Name="head_0_0.png" />
@@ -76,6 +79,8 @@
         </Folder>
         <Project Name="ccs_userInfo.csd" Type="Layer" />
         <Project Name="ccs_widget_game.csd" Type="Layer" />
+        <Project Name="ccs_gameInfo.csd" Type="Layer" />
+        <Project Name="ccs_widget_user.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

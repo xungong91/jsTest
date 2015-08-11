@@ -63,7 +63,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 }
 
     // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
+    director->setAnimationInterval(1.0 / 30);
     
     ScriptingCore* sc = ScriptingCore::getInstance();
     sc->addRegisterCallback(register_all_cocos2dx);
@@ -105,7 +105,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     // 3d can be commented out to reduce the package
     sc->addRegisterCallback(register_all_cocos2dx_3d);
     sc->addRegisterCallback(register_all_cocos2dx_3d_manual);
-     　
+    
     // 3d extension can be commented out to reduce the package
     sc->addRegisterCallback(register_all_cocos2dx_3d_extension);
     

@@ -22,8 +22,9 @@ public:
     
     bool openSzMjMobile();
     bool openMjMobile();
-private:
+    
     bool openURL(const string &openUrl);
+private:
     void openURLFail();
 };
 #endif
