@@ -47,6 +47,31 @@
  *
  */
 
+//全局变量
+var mo = mo || {};
+
+//channel Android:0 AppStore:1 IOS299:2 Huawei:3
+mo.channel = 0;
+mo.mainScene = null;
+
+//适配
+mo.reWinSize = function (){
+    var designSize = cc.size(321, 480);
+
+    mo.curSize = {};
+    if (cc.winSize.width / cc.winSize.height > designSize.width / designSize.height) {
+        //宽拉长 高不变
+        mo.curSize.width = cc.winSize.width / cc.winSize.height * designSize.height;
+        mo.curSize.height = designSize.height;
+    } else {
+        //宽不变 高拉长
+        mo.curSize.width = designSize.width;
+        mo.curSize.height = cc.winSize.height / cc.winSize.width * designSize.width;
+    }
+    cc.log("curSize width：" + mo.curSize.width + " height：" + mo.curSize.height);
+    cc.view.setDesignResolutionSize(mo.curSize.width, mo.curSize.height, cc.ResolutionPolicy.SHOW_ALL);
+};
+
 cc.game.onStart = function(){
     if(!cc.sys.isNative && document.getElementById("cocosLoading")) //If referenced loading.js, please remove it
         document.body.removeChild(document.getElementById("cocosLoading"));
@@ -56,12 +81,14 @@ cc.game.onStart = function(){
     // Adjust viewport meta
     cc.view.adjustViewPort(true);
     // Setup the resolution policy and design resolution size
-    cc.view.setDesignResolutionSize(800, 450, cc.ResolutionPolicy.SHOW_ALL);
+    //cc.view.setDesignResolutionSize(800, 450, cc.ResolutionPolicy.SHOW_ALL);
+    mo.reWinSize();
     // The game will be resized when browser size change
     cc.view.resizeWithBrowserSize(true);
     //load resources
-    cc.LoaderScene.preload(g_resources, function () {
-        cc.director.runScene(new HelloWorldScene());
-    }, this);
+
+    cc.loader.loadJs(["src/sceneHelper.js"], function(err){
+        mo.sceneHelper.runSceneMain();
+    });
 };
 cc.game.run();
