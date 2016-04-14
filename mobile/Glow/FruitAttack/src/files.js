@@ -4,5 +4,8 @@
 
 var Files = [
     "FruitAttack/src/resource.js",
-    "FruitAttack/src/gameLayer.js"
+    "FruitAttack/src/gameLayer.js",
+    "FruitAttack/src/gameUILayer.js",
+    "FruitAttack/src/gameHelper.js",
+    "FruitAttack/src/gamePatternSprite.js"
 ];
