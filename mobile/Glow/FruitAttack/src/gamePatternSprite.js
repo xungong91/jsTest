@@ -18,6 +18,14 @@ var PatternStatus = {
     "Explode":3
 };
 
+//水果消除状态
+var PatternClearStatus = {
+    "Normal" : 0,
+    "Destroy" : 1,
+    "UnFreeze" : 2,
+    "Explode" : 3
+};
+
 var GamePatternSprite = cc.Sprite.extend({
     mPatternType : -1,                              //水果类型，现在有7个 0开始
     mExtraAttr : PatternExtraAttr.Normal,
@@ -25,6 +33,7 @@ var GamePatternSprite = cc.Sprite.extend({
     mExtraStatus : PatternStatus.Normal,
     mIndexRow : null,
     mIndexCol : null,
+    mRemoveIndex : null,
     ctor:function (type, extraAttr) {
         this._super();
         this.setAnchorPoint(0.5, 0.5);
@@ -68,13 +77,22 @@ var GamePatternSprite = cc.Sprite.extend({
     },
 
     //移动
-    moveTo : function(delatime, pos){
+    moveTo : function(delaytime, pos){
         if (this.mExtraStatus == PatternStatus.Normal){
             this.mExtraStatus = PatternStatus.Move;
 
-            this.runAction(cc.sequence(cc.moveTo(delatime, pos), cc.callFunc(function(){
+            this.runAction(cc.sequence(cc.moveTo(delaytime, pos), cc.callFunc(function(){
                 this.mExtraStatus = PatternStatus.Normal;
             }.bind(this))))
+        }
+    },
+
+    //交换
+    swapTo : function(delaytime, pos){
+        if (this.mExtraStatus == PatternStatus.Normal){
+            this.mExtraStatus = PatternStatus.Move;
+
+            this.runAction(cc.sequence(cc.moveTo(delaytime, pos)));
         }
     },
 
@@ -96,7 +114,57 @@ var GamePatternSprite = cc.Sprite.extend({
             isSwap = false;
         }
         return isSwap;
+    },
+
+    //销毁
+    destroyPattern : function(){
+        this.mExtraStatus = PatternStatus.Destroy;
+
+        var effect = new cc.Sprite("#pattern_destroy_00.png");
+        effect.setPosition(this.getContentSize().width / 2, this.getContentSize().height / 2);
+        this.addChild(effect);
+
+        var animation = new cc.Animation();
+        for (var i = 0; i < 18; i++)
+        {
+            var frameName = cc.spriteFrameCache.getSpriteFrame("pattern_destroy_" + ("00"+i).slice(-2) + ".png");
+            animation.addSpriteFrame(frameName);
+        }
+        animation.setDelayPerUnit(0.025);
+
+        effect.runAction(cc.sequence(cc.animate(animation)));
+
+        this.runAction(cc.sequence(cc.fadeOut(0.5)));
+    },
+
+    //爆炸
+    explodePattern : function(){
+        this.mExtraStatus = PatternStatus.Explode;
+
+        var effect = new cc.Sprite("#pattern_explode_00.png");
+        effect.setPosition(this.getContentSize().width / 2, this.getContentSize().height / 2);
+        this.addChild(effect);
+
+        var animation = new cc.Animation();
+        for (var i=0; i < 17; i++)
+        {
+            var frameName = cc.spriteFrameCache.getSpriteFrame("pattern_explode_"+("00"+i).slice(-2)+".png");
+            animation.addSpriteFrame(frameName);
+        }
+        animation.setDelayPerUnit(0.025);
+
+        effect.runAction(cc.sequence(cc.animate(animation)));
+
+        this.runAction(cc.sequence(cc.fadeOut(0.5)));
+    },
+
+    //解冻
+    unFreeze : function(){
+        if (this.mExtraAttr == PatternExtraAttr.Freeze){
+            // 设置为普通属性，允许主动交换，去掉扩展属性精灵
+            this.mExtraAttr = PatternExtraAttr.Normal;
+            this.removeChild(this.mExtraAttrSprite, true);
+            mExtraAttrSprite = null;
+        }
     }
-
-
 });

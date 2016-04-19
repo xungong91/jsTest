@@ -15,8 +15,12 @@ var GameScene = cc.Scene.extend({
     }
 });
 
+var gMaxrixCount = 3;               //消除水果连续数量 大于等于该值才能消除
+
 var gPatternsFallTime = 0.4;		// 水果下落的时间
 var gPatternsAddHeight = 400;       // 水果生成时候 增加高度
+var gPatternsSwapTime = 0.17;       // 水果交换时间
+var gPatternsClearTime = 0.5;       // 清除时间
 
 var GameLayer = cc.Layer.extend({
     testname : null,                //test
@@ -37,12 +41,14 @@ var GameLayer = cc.Layer.extend({
     mProbabilityBomb : null,        //炸弹几率
     mProbabilityStone : null,       //石头几率
 
-    ctor:function () {
+    mDestroyBatchTally : 0,         //销毁编号
+
+        ctor:function () {
         this._super();
 
         this.testname = "gameLayer";
 
-        this.mPatternTypeMax = 7;
+        this.mPatternTypeMax = 3;
         this.mMatrixRow = 6;
         this.mMatrixCol = 6;
         this.mProbabilityFreeze = 3;
@@ -112,6 +118,7 @@ var GameLayer = cc.Layer.extend({
         this.addChild(this.mGameUILayer, 1)
     },
     onStart : function(){
+        this.stopAllActions();
         this.mPatternBatchNode.removeAllChildren();
         for (var row = 0; row < this.mMatrixRow; row++)
         {
@@ -120,6 +127,9 @@ var GameLayer = cc.Layer.extend({
                 this.addOnePattern(row, col);
             }
         }
+
+        //检测是否需要消除
+        this.detectionMatrix(gPatternsFallTime + 0.1);
     },
     addOnePattern : function(row, col){
         var temp = parseInt(Math.random() * 10000);
@@ -230,6 +240,306 @@ var GameLayer = cc.Layer.extend({
 
     //交换水果的位置
     swapTwoPattern : function(firstPattern, secondPattern, isRecover){
+        //位置数据
+        var firstRow = firstPattern.mIndexRow;
+        var firstCol = firstPattern.mIndexCol;
+        var secondRow = secondPattern.mIndexRow;
+        var secondCol = secondPattern.mIndexCol;
 
+        //开始交换
+        firstPattern.swapTo(gPatternsSwapTime, this.mPatternsPos[secondRow][secondCol]);
+        secondPattern.swapTo(gPatternsSwapTime, this.mPatternsPos[firstRow][firstCol]);
+
+        firstPattern.mIndexRow = secondRow;
+        firstPattern.mIndexCol = secondCol;
+        secondPattern.mIndexRow = firstRow;
+        secondPattern.mIndexCol = firstCol;
+        this.mPatternSprites[firstRow][firstCol] = secondPattern;
+        this.mPatternSprites[secondRow][secondCol] = firstPattern;
+
+        var patterns = {
+            "pattern1" : secondPattern,
+            "pattern2" : firstPattern,
+            "isRecover" : isRecover
+        };
+        this.runAction(cc.sequence(cc.delayTime(gPatternsSwapTime), cc.callFunc(this.onSwapFinish, this, patterns)));
+    },
+
+    //交换完水果回调
+    onSwapFinish : function(that, patterns){
+        var firstPattern = patterns["pattern1"];
+        var secondPattern = patterns["pattern2"];
+        var isRecover = patterns["isRecover"];
+
+        firstPattern.mExtraStatus = PatternStatus.Normal;
+        secondPattern.mExtraStatus = PatternStatus.Normal;
+
+        if (isRecover){
+
+        } else {
+            var	matrixMark = mo.gameHelper.createIntArray(this.mMatrixRow,this.mMatrixCol, PatternClearStatus.Normal);
+
+            if (this.getResultByPoint(firstPattern.mIndexRow, firstPattern.mIndexCol, matrixMark) ||
+                this.getResultByPoint(secondPattern.mIndexRow, secondPattern.mIndexCol, matrixMark)){
+                this.clearSomePatterns(matrixMark);
+            } else {
+                this.swapTwoPattern(firstPattern, secondPattern, true);
+            }
+        }
+    },
+
+    //获取可以被消除的水果矩阵
+    getResultByPoint : function(row, col, matriMark){
+        if (this.mPatternSprites[row][col] === null){
+            return false;
+        }
+
+        //状态不为普通 或者没有type不能消除
+        if (this.mPatternSprites[row][col].mPatternType === -1 || this.mPatternSprites[row][col].mExtraStatus != PatternStatus.Normal){
+            return false;
+        }
+
+        var result = false;
+        var clearPatterns = new Array();
+        var tempPatterns = new Array();
+        var type = this.mPatternSprites[row][col].mPatternType;
+        var i = 0;
+
+        //纵向找
+        i = row;
+        while (i >= 0){
+            var sprite = this.mPatternSprites[i][col];
+            if (sprite && sprite.mExtraStatus === PatternStatus.Normal && sprite.mPatternType == type){
+                tempPatterns.push(sprite);
+            } else {
+                break;
+            }
+            i--;
+        }
+        i = row + 1;
+        while (i < this.mMatrixRow){
+            var sprite = this.mPatternSprites[i][col];
+            if (sprite && sprite.mExtraStatus === PatternStatus.Normal && sprite.mPatternType == type){
+                tempPatterns.push(sprite);
+            } else {
+                break;
+            }
+            i++;
+        }
+        if (tempPatterns.length >= gMaxrixCount){
+            //找到啦
+            clearPatterns = clearPatterns.concat(tempPatterns);
+            result = true;
+        }
+
+        //横向找
+        tempPatterns = new Array();
+        i = col;
+        while (i >= 0){
+            var sprite = this.mPatternSprites[row][i];
+            if (sprite && sprite.mExtraStatus === PatternStatus.Normal && sprite.mPatternType == type){
+                tempPatterns.push(sprite);
+            } else {
+                break;
+            }
+            i--;
+        }
+        i = col + 1;
+        while (i < this.mMatrixRow){
+            var sprite = this.mPatternSprites[row][i];
+            if (sprite && sprite.mExtraStatus === PatternStatus.Normal && sprite.mPatternType == type){
+                tempPatterns.push(sprite);
+            } else {
+                break;
+            }
+            i++;
+        }
+        if (tempPatterns.length >= gMaxrixCount){
+            //找到啦
+            clearPatterns = clearPatterns.concat(tempPatterns);
+            result = true;
+        }
+
+        for(var i = 0; i < clearPatterns.length; i++){
+            var sprite = clearPatterns[i];
+            if (sprite.mExtraAttr === PatternExtraAttr.Bomb){
+                for (var x = sprite.mIndexRow - 1; x <= sprite.mIndexRow + 1; x++){
+                    for (var y = sprite.mIndexCol - 1; y <= sprite.mIndexCol + 1; y++){
+                        if (x >=0 && x < this.mMatrixRow && y >= 0 && y < this.mMatrixCol){
+                            matriMark[x][y] = PatternClearStatus.Explode;
+                        }
+                    }
+                }
+            } else if (sprite.mExtraAttr === PatternExtraAttr.Freeze){
+                if (matriMark[sprite.mIndexRow][sprite.mIndexCol] != PatternClearStatus.Explode){
+                    matriMark[sprite.mIndexRow][sprite.mIndexCol] = PatternClearStatus.UnFreeze;
+                }
+            } else {
+                if (matriMark[sprite.mIndexRow][sprite.mIndexCol] === 0){
+                    matriMark[sprite.mIndexRow][sprite.mIndexCol] = PatternClearStatus.Destroy;
+                }
+            }
+        }
+        return result;
+    },
+
+    // 消除掉相同的水果
+    clearSomePatterns:function(matrixMark){
+        var tally = 0;
+        this.mDestroyBatchTally++;
+
+        for (var row = 0; row < this.mMatrixRow; row++) {
+            for (var col = 0; col < this.mMatrixCol; col++) {
+                var sprite = this.mPatternSprites[row][col];
+                if (!sprite){
+                    continue;
+                }
+                if (matrixMark[row][col] == PatternClearStatus.Destroy){
+                    sprite.destroyPattern();
+                    sprite.mRemoveIndex = this.mDestroyBatchTally;
+                    tally++;
+                } else if (matrixMark[row][col] == PatternClearStatus.Explode){
+                    sprite.explodePattern();
+                    sprite.mRemoveIndex = this.mDestroyBatchTally;
+                    tally++;
+                } else if (matrixMark[row][col] == PatternClearStatus.UnFreeze){
+                    sprite.unFreeze();
+                }
+            }
+        }
+
+        this.runAction(
+            cc.sequence(
+                cc.delayTime(gPatternsClearTime),
+                cc.callFunc(this.onClearFinish.bind(this), this, this.mDestroyBatchTally)));
+
+        return tally;
+    },
+
+    //消除指定index的精灵
+    onClearFinish : function(that, removeIndex){
+
+        //移除
+        for (var row = 0; row < this.mMatrixRow; row++) {
+            for (var col = 0; col < this.mMatrixCol; col++) {
+                var sprite = this.mPatternSprites[row][col];
+                if (sprite && sprite.mRemoveIndex === removeIndex) {
+                    sprite.removeFromParent();
+                    this.mPatternSprites[row][col] = null;
+                }
+            }
+        }
+
+        //如果石头下面都是空的化 移除石头
+        var removeStone = new Array();
+        for (var col = 0; col < this.mMatrixCol; col++) {
+            for (var row = 0; row < this.mMatrixRow; row ++){
+                if (this.mPatternSprites[row][col]){
+                    if (this.mPatternSprites[row][col].mExtraAttr == PatternExtraAttr.Stone){
+                        removeStone.push(this.mPatternSprites[row][col])
+                    }else{
+                        break;
+                    }
+                }
+            }
+        }
+        for (var i = 0; i < removeStone.length; i++){
+            removeStone[i].runAction(cc.sequence(
+                cc.moveBy(gPatternsFallTime, cc.p(0, - gPatternsAddHeight)),
+                cc.removeSelf(true)
+            ));
+            this.mPatternSprites[removeStone[i].mIndexRow][removeStone[i].mIndexCol] = null;
+        }
+
+        //移动精灵
+        for (var col = 0; col < this.mMatrixCol; col++) {
+            for (var row = 0; row < this.mMatrixRow; row++){
+                if (this.mPatternSprites[row][col]){
+                    var movoToRow = row;
+                    var i = row - 1;
+                    while (i >= 0){
+                        if (!this.mPatternSprites[i][col]){
+                            movoToRow = i;
+                            i--;
+                        }else {
+                            break;
+                        }
+                    }
+                    if (movoToRow != row){
+                        var moveCount = row - movoToRow;
+                        var time = moveCount * this.mPatternBgItemSize.height / (gPatternsAddHeight / gPatternsFallTime);
+                        this.mPatternSprites[row][col].moveTo(time, this.mPatternsPos[movoToRow][col]);
+
+                        this.setSpriteLocation(this.mPatternSprites[row][col], movoToRow, col);
+                        this.mPatternSprites[row][col] = null;
+                    }
+                }
+            }
+
+            //var startRow = -1;
+            //var moveCount = 0;
+            //for (var row = 0; row < this.mMatrixRow; row++) {
+            //    var tempSprite = this.mPatternSprites[row][col];
+            //    if (!tempSprite){
+            //        moveCount++;
+            //        if (startRow == -1){
+            //            startRow = row;
+            //        }
+            //    }
+            //}
+            //
+            //if (moveCount != 0){
+            //    for(var row = startRow; row < this.mMatrixRow; row++) {
+            //        var tempSprite = this.mPatternSprites[row][col];
+            //        if (tempSprite){
+            //            var toRow = row - moveCount;
+            //            var time = moveCount * this.mPatternBgItemSize.height / (gPatternsAddHeight / gPatternsFallTime);
+            //            tempSprite.moveTo(time, this.mPatternsPos[toRow][col]);
+            //
+            //            this.setSpriteLocation(tempSprite, toRow, col);
+            //            this.mPatternSprites[row][col] = null;
+            //        }
+            //    }
+            //}
+        }
+
+        //添加精灵
+        for(var row = 0; row < this.mMatrixRow; row++){
+            for(var col = 0; col < this.mMatrixCol; col++){
+                if (this.mPatternSprites[row][col] === null){
+                    this.addOnePattern(row, col);
+                }
+            }
+        }
+
+        //检测是否需要清除
+        this.detectionMatrix(0.65);
+    },
+
+    setSpriteLocation : function(sprite, row, col){
+        this.mPatternSprites[row][col] = sprite;
+        sprite.mIndexRow = row;
+        sprite.mIndexCol = col;
+    },
+
+    //检测水果矩阵是否有需要消除的水果
+    detectionMatrix : function(delayTime){
+        this.runAction(cc.sequence(cc.delayTime(delayTime), cc.callFunc(function(){
+            var matrixMark = mo.gameHelper.createIntArray(this.mMatrixRow, this.mMatrixCol, PatternClearStatus.Normal);
+            for (var row = 0; row < this.mMatrixRow; row++){
+                for (var col = 0; col < this.mMatrixCol; col++){
+                    this.getResultByPoint(row, col, matrixMark);
+                }
+            }
+
+            if (this.clearSomePatterns(matrixMark) == 0){
+                //一行都没有消除
+                this.runAction(cc.sequence(cc.delayTime(2), cc.callFunc(function(){
+                    cc.log("reStart");
+                    this.onStart();
+                }.bind(this))));
+            }
+        }.bind(this))));
     }
+
 });

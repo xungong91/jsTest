@@ -17,11 +17,17 @@ var GameUILayer = cc.Layer.extend({
             "FruitAttack/res/btn/btnStartGameDown.png",
             function () {
                 this.onStartFunc();
+                //var str = ["是的"];
+                //this.getValue(str);
+                //cc.log(str[0]);
             }, this);
         btn.setPosition(cc.winSize.width / 2, 30);
 
         var menu = new cc.Menu(btn);
         menu.setPosition(0, 0);
         this.addChild(menu);
+    },
+    getValue : function(test){
+        test[0] += "呵呵";
     }
 });
