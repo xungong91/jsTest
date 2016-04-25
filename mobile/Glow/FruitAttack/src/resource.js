@@ -8,5 +8,10 @@ var Resource = [
     "FruitAttack/res/btn/btnStartGameDown.png",
     "FruitAttack/res/baseResource.plist",
     "FruitAttack/res/baseResource.png",
-    "FruitAttack/res/PatternBg.png"
+    "FruitAttack/res/PatternBg.png",
+
+    //music
+    "FruitAttack/audio/effect_clearPattern.ogg",
+    "FruitAttack/audio/effect_bombPattern.ogg",
+    "FruitAttack/audio/effect_unswap.ogg"
 ];

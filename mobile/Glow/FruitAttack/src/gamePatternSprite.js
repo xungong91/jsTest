@@ -135,6 +135,8 @@ var GamePatternSprite = cc.Sprite.extend({
         effect.runAction(cc.sequence(cc.animate(animation)));
 
         this.runAction(cc.sequence(cc.fadeOut(0.5)));
+
+        cc.audioEngine.playEffect("FruitAttack/audio/effect_clearPattern.ogg");
     },
 
     //爆炸
@@ -156,6 +158,8 @@ var GamePatternSprite = cc.Sprite.extend({
         effect.runAction(cc.sequence(cc.animate(animation)));
 
         this.runAction(cc.sequence(cc.fadeOut(0.5)));
+
+        cc.audioEngine.playEffect("FruitAttack/audio/effect_bombPattern.ogg");
     },
 
     //解冻
@@ -164,7 +168,7 @@ var GamePatternSprite = cc.Sprite.extend({
             // 设置为普通属性，允许主动交换，去掉扩展属性精灵
             this.mExtraAttr = PatternExtraAttr.Normal;
             this.removeChild(this.mExtraAttrSprite, true);
-            mExtraAttrSprite = null;
+            this.mExtraAttrSprite = null;
         }
     }
 });

@@ -21,6 +21,7 @@ var gPatternsFallTime = 0.4;		// 水果下落的时间
 var gPatternsAddHeight = 400;       // 水果生成时候 增加高度
 var gPatternsSwapTime = 0.17;       // 水果交换时间
 var gPatternsClearTime = 0.5;       // 清除时间
+var gPatternsCheckTime = 0.6;
 
 var GameLayer = cc.Layer.extend({
     testname : null,                //test
@@ -33,6 +34,7 @@ var GameLayer = cc.Layer.extend({
     mCheckMarkSpr : null,           //选中提示
     mFirstCheckPattern:null,        //第一次点中的
     mSecondCheckPattern:null,       //第二次点中的
+    mTouchBegenPos : null,          //第一次点击位置
 
     mPatternTypeMax : null,         //水果类型总数 现在是7
     mMatrixRow : null,              //行
@@ -43,12 +45,12 @@ var GameLayer = cc.Layer.extend({
 
     mDestroyBatchTally : 0,         //销毁编号
 
-        ctor:function () {
+    ctor:function () {
         this._super();
 
         this.testname = "gameLayer";
 
-        this.mPatternTypeMax = 3;
+        this.mPatternTypeMax = 7;
         this.mMatrixRow = 6;
         this.mMatrixCol = 6;
         this.mProbabilityFreeze = 3;
@@ -58,6 +60,7 @@ var GameLayer = cc.Layer.extend({
         this.mPatternsPos = mo.gameHelper.createIntArray(this.mMatrixRow, this.mMatrixCol, null);
         this.mPatternSprites = mo.gameHelper.createIntArray(this.mMatrixRow, this.mMatrixCol, null);
 
+        cc.audioEngine.setEffectsVolume(0);
     },
     onEnter:function () {
         this._super();
@@ -96,7 +99,6 @@ var GameLayer = cc.Layer.extend({
                 var item = new cc.Sprite("FruitAttack/res/PatternBg.png");
                 item.setAnchorPoint(0.5,0.5);
                 item.setPosition(this.mPatternsPos[row][col]);
-                //cc.log("row:" + row + " col:" + col + "poins x:" + this.mPatternsPos[row][col].x + " y:" + this.mPatternsPos[row][col].y);
                 item.visit();		// 深度渲染这个节点
             }
         }
@@ -129,7 +131,8 @@ var GameLayer = cc.Layer.extend({
         }
 
         //检测是否需要消除
-        this.detectionMatrix(gPatternsFallTime + 0.1);
+        //this.runAction(cc.sequence(cc.delayTime(gPatternsCheckTime), cc.callFunc(this.detectionMatrix.bind(this), this)));
+        this.scheduleOnce(this.detectionMatrix.bind(this), gPatternsCheckTime, "detectionMatrix");
     },
     addOnePattern : function(row, col){
         var temp = parseInt(Math.random() * 10000);
@@ -161,7 +164,8 @@ var GameLayer = cc.Layer.extend({
 
             // 分别调用自定义方法
             onTouchBegan: function (touch, event) {
-                var sprite = this.findTouchPatternSprite(touch.getLocation());
+                this.mTouchBegenPos = touch.getLocation();
+                var sprite = this.findTouchPatternSprite(this.mTouchBegenPos);
                 var isTouch = sprite && sprite.getTouchBegen();
                 if (isTouch){
                     this.onCheckPattern(sprite);
@@ -169,7 +173,38 @@ var GameLayer = cc.Layer.extend({
                 return isTouch;
             }.bind(this),
             onTouchMoved: function (touch, event) {
-                var target = event.getCurrentTarget();
+                if (this.mTouchBegenPos != null && this.mFirstCheckPattern){
+                    var localtion = touch.getLocation();
+                    var offsetSize = cc.size(this.mPatternBgItemSize.width / 2, this.mPatternBgItemSize.height / 2);
+                    var offsetX = localtion.x - this.mTouchBegenPos.x;
+                    var offsetY = localtion.y - this.mTouchBegenPos.y;
+                    if (Math.abs(offsetX) > offsetSize.width || Math.abs(offsetY) > offsetSize.height){
+                        var x = -1, y = -1;
+                        if (Math.abs(offsetX) > Math.abs(offsetY)){
+                            x = offsetX > 0 ? 1 : -1;
+                            y = 0;
+                            cc.log("xxxx offset x:" + offsetX + "y:" + offsetY);
+                        }else{
+                            x = 0;
+                            y = offsetY > 0 ? 1 : -1;
+                            cc.log("yyyy offset x:" + offsetX + "y:" + offsetY);
+                        }
+                        var row = this.mFirstCheckPattern.mIndexRow + y;
+                        var col = this.mFirstCheckPattern.mIndexCol + x;
+                        if (row >= 0 && row < this.mMatrixRow && col >=0 && col < this.mMatrixCol){
+                            var secondPattern = this.mPatternSprites[row][col];
+                            if ( secondPattern.getIsSwap()){
+                                this.swapTwoPattern(this.mFirstCheckPattern, secondPattern, false);
+                                this.mFirstCheckPattern = null;
+                                this.mSecondCheckPattern = null;
+                                this.mCheckMarkSpr.setPosition(-1000, -1000);
+                            }else{
+                                this.mFirstCheckPattern = null;
+                                this.mCheckMarkSpr.setPosition(-1000, -1000);
+                            }
+                        }
+                    }
+                }
             }.bind(this),
             onTouchEnded: function (touch, event) {
                 //不处理
@@ -202,8 +237,7 @@ var GameLayer = cc.Layer.extend({
         if (pattern){
             if (this.mFirstCheckPattern === null){
                 this.mFirstCheckPattern = pattern;
-                var p = this.mFirstCheckPattern.getPosition();
-                this.mCheckMarkSpr.setPosition(p);
+                this.mCheckMarkSpr.setPosition(this.mPatternsPos[this.mFirstCheckPattern.mIndexRow][this.mFirstCheckPattern.mIndexCol]);
             }else {
                 this.mSecondCheckPattern = pattern;
                 if (this.mFirstCheckPattern === pattern){
@@ -230,9 +264,9 @@ var GameLayer = cc.Layer.extend({
                     this.mSecondCheckPattern = null;
                 }else{
                     // 不挨着，使新点击的水果精灵呈被选中状态
-                    this.mFirstCheckPattern = null;
                     this.mSecondCheckPattern = null;
-                    this.onCheckPattern(pattern);
+                    this.mFirstCheckPattern = pattern;
+                    this.mCheckMarkSpr.setPosition(this.mPatternsPos[this.mFirstCheckPattern.mIndexRow][this.mFirstCheckPattern.mIndexCol]);
                 }
             }
         }
@@ -277,13 +311,15 @@ var GameLayer = cc.Layer.extend({
         if (isRecover){
 
         } else {
-            var	matrixMark = mo.gameHelper.createIntArray(this.mMatrixRow,this.mMatrixCol, PatternClearStatus.Normal);
+            var	matrixMark = mo.gameHelper.createIntArray(this.mMatrixRow, this.mMatrixCol, PatternClearStatus.Normal);
 
-            if (this.getResultByPoint(firstPattern.mIndexRow, firstPattern.mIndexCol, matrixMark) ||
-                this.getResultByPoint(secondPattern.mIndexRow, secondPattern.mIndexCol, matrixMark)){
+            var result1 = this.getResultByPoint(firstPattern.mIndexRow, firstPattern.mIndexCol, matrixMark);
+            var result2 = this.getResultByPoint(secondPattern.mIndexRow, secondPattern.mIndexCol, matrixMark)
+            if (result1 || result2){
                 this.clearSomePatterns(matrixMark);
             } else {
                 this.swapTwoPattern(firstPattern, secondPattern, true);
+                cc.audioEngine.playEffect("FruitAttack/audio/effect_unswap.ogg");
             }
         }
     },
@@ -309,7 +345,7 @@ var GameLayer = cc.Layer.extend({
         i = row;
         while (i >= 0){
             var sprite = this.mPatternSprites[i][col];
-            if (sprite && sprite.mExtraStatus === PatternStatus.Normal && sprite.mPatternType == type){
+            if (sprite && (sprite.mExtraStatus === PatternStatus.Normal) && (sprite.mPatternType == type)){
                 tempPatterns.push(sprite);
             } else {
                 break;
@@ -467,40 +503,18 @@ var GameLayer = cc.Layer.extend({
                     }
                     if (movoToRow != row){
                         var moveCount = row - movoToRow;
-                        var time = moveCount * this.mPatternBgItemSize.height / (gPatternsAddHeight / gPatternsFallTime);
-                        this.mPatternSprites[row][col].moveTo(time, this.mPatternsPos[movoToRow][col]);
-
+                        //var time = moveCount * this.mPatternBgItemSize.height / (gPatternsAddHeight / gPatternsFallTime);
+                        var time = 0.1 + moveCount * 0.05;
+                        if (this.mPatternSprites[row][col] == this.mFirstCheckPattern){
+                            this.mCheckMarkSpr.setPosition(-1000, -1000);
+                            this.mFirstCheckPattern = null;
+                        }
+                        this.mPatternSprites[row][col].runAction(cc.sequence(cc.moveTo(time, this.mPatternsPos[movoToRow][col])));
                         this.setSpriteLocation(this.mPatternSprites[row][col], movoToRow, col);
                         this.mPatternSprites[row][col] = null;
                     }
                 }
             }
-
-            //var startRow = -1;
-            //var moveCount = 0;
-            //for (var row = 0; row < this.mMatrixRow; row++) {
-            //    var tempSprite = this.mPatternSprites[row][col];
-            //    if (!tempSprite){
-            //        moveCount++;
-            //        if (startRow == -1){
-            //            startRow = row;
-            //        }
-            //    }
-            //}
-            //
-            //if (moveCount != 0){
-            //    for(var row = startRow; row < this.mMatrixRow; row++) {
-            //        var tempSprite = this.mPatternSprites[row][col];
-            //        if (tempSprite){
-            //            var toRow = row - moveCount;
-            //            var time = moveCount * this.mPatternBgItemSize.height / (gPatternsAddHeight / gPatternsFallTime);
-            //            tempSprite.moveTo(time, this.mPatternsPos[toRow][col]);
-            //
-            //            this.setSpriteLocation(tempSprite, toRow, col);
-            //            this.mPatternSprites[row][col] = null;
-            //        }
-            //    }
-            //}
         }
 
         //添加精灵
@@ -513,7 +527,8 @@ var GameLayer = cc.Layer.extend({
         }
 
         //检测是否需要清除
-        this.detectionMatrix(0.65);
+        this.scheduleOnce(this.detectionMatrix.bind(this), gPatternsCheckTime, "detectionMatrix");
+        //this.runAction(cc.sequence(cc.delayTime(gPatternsCheckTime), cc.callFunc(this.detectionMatrix.bind(this), this)));
     },
 
     setSpriteLocation : function(sprite, row, col){
@@ -523,23 +538,25 @@ var GameLayer = cc.Layer.extend({
     },
 
     //检测水果矩阵是否有需要消除的水果
-    detectionMatrix : function(delayTime){
-        this.runAction(cc.sequence(cc.delayTime(delayTime), cc.callFunc(function(){
-            var matrixMark = mo.gameHelper.createIntArray(this.mMatrixRow, this.mMatrixCol, PatternClearStatus.Normal);
-            for (var row = 0; row < this.mMatrixRow; row++){
-                for (var col = 0; col < this.mMatrixCol; col++){
-                    this.getResultByPoint(row, col, matrixMark);
-                }
+    detectionMatrix : function(){
+        var isClear = false;
+        var matrixMark = mo.gameHelper.createIntArray(this.mMatrixRow, this.mMatrixCol, PatternClearStatus.Normal);
+        for (var row = 0; row < this.mMatrixRow; row++){
+            for (var col = 0; col < this.mMatrixCol; col++){
+                isClear = this.getResultByPoint(row, col, matrixMark) || isClear;
             }
+        }
 
+        if (isClear){
             if (this.clearSomePatterns(matrixMark) == 0){
                 //一行都没有消除
                 this.runAction(cc.sequence(cc.delayTime(2), cc.callFunc(function(){
-                    cc.log("reStart");
-                    this.onStart();
+                    //TODO
+                    //cc.log("reStart");
+                    //this.onStart();
                 }.bind(this))));
             }
-        }.bind(this))));
+        }
     }
 
 });

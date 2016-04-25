@@ -17,9 +17,6 @@ var GameUILayer = cc.Layer.extend({
             "FruitAttack/res/btn/btnStartGameDown.png",
             function () {
                 this.onStartFunc();
-                //var str = ["是的"];
-                //this.getValue(str);
-                //cc.log(str[0]);
             }, this);
         btn.setPosition(cc.winSize.width / 2, 30);
 
