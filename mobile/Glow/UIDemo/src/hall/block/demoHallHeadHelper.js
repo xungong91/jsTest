@@ -16,9 +16,6 @@ var DemoHallHeadHelper = function(){
     };
 
     that.loadImageBg = function(){
-        //var shape = new cc.DrawNode();
-        //shape.drawDot(cc.p(0, 0), 10, cc.color.WHITE);
-        //shape.drawCircle(cc.p(0, 0), 20, 0, 100, false, 30, cc.color.WHITE);
         var sprite = new cc.Sprite("UIDemo/res/ccs/userInfo/photoBgClipping.png");
         var clipper = new cc.ClippingNode(sprite);
         clipper.setInverted(false);

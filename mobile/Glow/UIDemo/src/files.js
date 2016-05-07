@@ -13,6 +13,8 @@ var Files = [
     "UIDemo/src/hall/demoMallLayer.js",
     "UIDemo/src/hall/block/demoHallHeadHelper.js",
     "UIDemo/src/hall/block/demoHallHornHelper.js",
+    "UIDemo/src/hall/dialog/gameDialogHelper.js",
+    "UIDemo/src/hall/dialog/demoWaitLayer.js",
     "UIDemo/src/widget/demoWeidgetLayer.js",
     "UIDemo/src/widget/demoExchangeItem.js",
     "UIDemo/src/widget/demoMallItem.js"
