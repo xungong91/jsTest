@@ -1,0 +1,15 @@
+{
+  "excludeScenes": [
+    "2d2f792f-a40c-49bb-a189-ed176a246e49"
+  ],
+  "orientation": {
+    "landscapeLeft": false,
+    "landscapeRight": false,
+    "portrait": true,
+    "upsideDown": false
+  },
+  "packageName": "com.gxgame.Crush",
+  "startScene": "24bb242b-d8ba-4009-9cb1-c4fe0724827e",
+  "title": "Crush",
+  "webOrientation": "auto"
+}

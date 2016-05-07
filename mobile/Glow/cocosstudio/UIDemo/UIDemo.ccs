@@ -1,0 +1,58 @@
+<Solution>
+  <PropertyGroup Name="UIDemo" Version="2.3.2.3" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="MainLayer.csd" Type="Layer" />
+        <Folder Name="comon">
+          <Image Name="left.png" />
+          <Image Name="right.png" />
+          <Image Name="hallBg.png" />
+          <Image Name="return_btn.png" />
+          <Image Name="bg.png" />
+          <Image Name="bg2.png" />
+          <Image Name="hallBg2.png" />
+        </Folder>
+        <Folder Name="btn">
+          <Image Name="activity.png" />
+          <Image Name="BottomBg.png" />
+          <Image Name="exchange.png" />
+          <Image Name="foward.png" />
+          <Image Name="mall.png" />
+          <Image Name="rank.png" />
+          <Image Name="task.png" />
+        </Folder>
+        <Project Name="ExchangeLayer.csd" Type="Layer" />
+        <Folder Name="mall">
+          <Image Name="exchange_item_bg.png" />
+          <Image Name="coin1.png" />
+          <Image Name="item_bg.png" />
+        </Folder>
+        <Project Name="MallItem.csd" Type="Layer" />
+        <Folder Name="userInfo">
+          <Image Name="coin.png" />
+          <Image Name="coinBg.png" />
+          <Image Name="firstChargeIcon.png" />
+          <Image Name="helpBtn.png" />
+          <Image Name="messageBtn.png" />
+          <Image Name="photoBg.png" />
+          <Image Name="returnBtn.png" />
+          <Image Name="setBtn.png" />
+          <Image Name="userNameBg.png" />
+          <Image Name="vipIcon.png" />
+          <Image Name="default_man.png" />
+          <Image Name="default_woman.png" />
+          <Image Name="photoBgClipping.png" />
+        </Folder>
+        <Folder Name="horn">
+          <Image Name="bg.png" />
+          <Image Name="pen.png" />
+          <Image Name="trumpet1.png" />
+          <Image Name="trumpet2.png" />
+          <Image Name="trumpet3.png" />
+          <Image Name="zhezhao.png" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

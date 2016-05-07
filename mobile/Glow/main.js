@@ -56,7 +56,7 @@ mo.mainScene = null;
 
 //适配
 mo.reWinSize = function (){
-    var designSize = cc.size(321, 480);
+    var designSize = cc.size(960, 640);
 
     mo.curSize = {};
     if (cc.winSize.width / cc.winSize.height > designSize.width / designSize.height) {

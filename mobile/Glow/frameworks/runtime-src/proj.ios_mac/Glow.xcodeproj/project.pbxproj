@@ -70,6 +70,8 @@
 		D454520C156E22BD00887EB5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D454520B156E22BD00887EB5 /* libz.dylib */; };
 		D4545227156E28EF00887EB5 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4545215156E28EF00887EB5 /* AppDelegate.cpp */; };
 		D6B061241803AB9F0077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B061231803AB9F0077942B /* CoreMotion.framework */; };
+		EA5424331CDC90570038EED1 /* FruitAttack in Resources */ = {isa = PBXBuildFile; fileRef = EA5424311CDC90570038EED1 /* FruitAttack */; };
+		EA5424341CDC90570038EED1 /* UIDemo in Resources */ = {isa = PBXBuildFile; fileRef = EA5424321CDC90570038EED1 /* UIDemo */; };
 		EADF04C31CAB76870029AAB9 /* NativeSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADF04C11CAB76870029AAB9 /* NativeSocket.cpp */; };
 		EADF04C81CAB81450029AAB9 /* jsb_cocos2dx_nativesocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EADF04C61CAB81450029AAB9 /* jsb_cocos2dx_nativesocket.cpp */; };
 /* End PBXBuildFile section */
@@ -192,6 +194,8 @@
 		D4545215156E28EF00887EB5 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		D4545216156E28EF00887EB5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6B061231803AB9F0077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		EA5424311CDC90570038EED1 /* FruitAttack */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FruitAttack; path = ../../../FruitAttack; sourceTree = "<group>"; };
+		EA5424321CDC90570038EED1 /* UIDemo */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UIDemo; path = ../../../UIDemo; sourceTree = "<group>"; };
 		EADF04C11CAB76870029AAB9 /* NativeSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NativeSocket.cpp; path = "../../js-bindings/cocos2d-x/cocos/my/NativeSocket.cpp"; sourceTree = "<group>"; };
 		EADF04C21CAB76870029AAB9 /* NativeSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NativeSocket.h; path = "../../js-bindings/cocos2d-x/cocos/my/NativeSocket.h"; sourceTree = "<group>"; };
 		EADF04C61CAB81450029AAB9 /* jsb_cocos2dx_nativesocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jsb_cocos2dx_nativesocket.cpp; path = "../../js-bindings/bindings/auto/jsb_cocos2dx_nativesocket.cpp"; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 		15628F5B15F0F5C2000CF24B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA5424311CDC90570038EED1 /* FruitAttack */,
+				EA5424321CDC90570038EED1 /* UIDemo */,
 				1A1A081B18C9DF05005C6854 /* project.json */,
 				1A6BF21418C9DB5900FB0E1C /* main.js */,
 				C0799CB518BAE62000E9C828 /* res */,
@@ -533,6 +539,7 @@
 				1AD7E0A818C9DB93004817A6 /* main.js in Resources */,
 				509D4ABE17EBB2AB00697056 /* Default.png in Resources */,
 				5091731E17ECDF7A00D62437 /* Icon-80.png in Resources */,
+				EA5424331CDC90570038EED1 /* FruitAttack in Resources */,
 				5091731F17ECDF7A00D62437 /* Icon-100.png in Resources */,
 				509D4AC117EBB2AB00697056 /* Icon-72.png in Resources */,
 				509D4AC017EBB2AB00697056 /* Icon-57.png in Resources */,
@@ -544,6 +551,7 @@
 				509D4AC317EBB2AB00697056 /* Icon-114.png in Resources */,
 				509D4ABD17EBB2AB00697056 /* Default-568h@2x.png in Resources */,
 				509D4ABF17EBB2AB00697056 /* Default@2x.png in Resources */,
+				EA5424341CDC90570038EED1 /* UIDemo in Resources */,
 				509D4AC217EBB2AB00697056 /* Icon-76.png in Resources */,
 				5091731B17ECDF7A00D62437 /* Icon-40.png in Resources */,
 				5091731C17ECDF7A00D62437 /* Icon-50.png in Resources */,

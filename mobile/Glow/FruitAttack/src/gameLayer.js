@@ -21,7 +21,7 @@ var gPatternsFallTime = 0.4;		// 水果下落的时间
 var gPatternsAddHeight = 400;       // 水果生成时候 增加高度
 var gPatternsSwapTime = 0.17;       // 水果交换时间
 var gPatternsClearTime = 0.5;       // 清除时间
-var gPatternsCheckTime = 0.6;
+var gPatternsCheckTime = 0.6;       // 检测是否可以清除时间
 
 var GameLayer = cc.Layer.extend({
     testname : null,                //test

@@ -1,0 +1,271 @@
+{
+  "ID": "6b486e4e-0472-4cb6-ac20-d78d7881f37c",
+  "Version": "2.3.2.3",
+  "Name": "MallItem",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 30,
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "AnchorPoint": {},
+            "Position": {
+              "X": 129.0,
+              "Y": 177.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 129.0,
+            "RightMargin": 129.0,
+            "TopMargin": 177.0,
+            "BottomMargin": 177.0,
+            "Tag": 32,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "mall/exchange_item_bg.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 258,
+                "Scale9Height": 354,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.4031,
+                  "Y": 0.3688
+                },
+                "LeftMargin": -129.0,
+                "RightMargin": -129.0,
+                "TopMargin": -177.0,
+                "BottomMargin": -177.0,
+                "Tag": 31,
+                "ActionTag": -1976590620,
+                "Size": {
+                  "X": 258.0,
+                  "Y": 354.0
+                },
+                "Name": "Image_bg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 26,
+                "LabelText": "名称",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 145.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -55.5,
+                "RightMargin": -55.5,
+                "TopMargin": -160.5,
+                "BottomMargin": 129.5,
+                "Tag": 33,
+                "ActionTag": 1363172027,
+                "Size": {
+                  "X": 52.0,
+                  "Y": 31.0
+                },
+                "Name": "Text_name",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "mall/coin1.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 160,
+                "Scale9Height": 126,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -80.0,
+                "RightMargin": -80.0,
+                "TopMargin": -63.0,
+                "BottomMargin": -63.0,
+                "Tag": 34,
+                "ActionTag": 1681440579,
+                "Size": {
+                  "X": 160.0,
+                  "Y": 126.0
+                },
+                "Name": "Image_product",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 26,
+                "LabelText": "1000金币",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": -120.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 165,
+                  "G": 42,
+                  "B": 42
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -26.0,
+                "RightMargin": -26.0,
+                "TopMargin": 104.5,
+                "BottomMargin": -135.5,
+                "Tag": 35,
+                "ActionTag": -721611806,
+                "Size": {
+                  "X": 109.0,
+                  "Y": 31.0
+                },
+                "Name": "Text_price",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 1087377305,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "Panel_center",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 258.0,
+          "Y": 354.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "mall/coin1.png",
+        "mall/exchange_item_bg.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

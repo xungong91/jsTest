@@ -25,6 +25,16 @@ var SceneHlper = function(){
         });
     };
 
+    that.runSceneUIDemo = function(){
+        cc.loader.loadJs(["UIDemo/src/files.js"], function(err){
+            cc.loader.loadJs(Files, function(err){
+                GameLoadingLayer.preload(Resource, function () {
+                    cc.director.runScene(new DemoScene());
+                }, this);
+            });
+        });
+    };
+
     return that;
 };
 

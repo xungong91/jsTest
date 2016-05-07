@@ -117,6 +117,7 @@ var GameLoadingLayer = cc.Scene.extend({
         cc.Node.prototype.onExit.call(this);
         var tmpStr = "Loading... 0%";
         this.labelProgress.setString(tmpStr);
+        cc.loaderScene = null;
     },
 
     /**
@@ -165,7 +166,6 @@ var GameLoadingLayer = cc.Scene.extend({
 
 // preload用来预加载loading界面，显示loading进度
 GameLoadingLayer.preload = function(resources, cb){
-    
     if(!cc.loaderScene) {
         cc.loaderScene = new GameLoadingLayer();
         cc.loaderScene.init();
@@ -173,6 +173,6 @@ GameLoadingLayer.preload = function(resources, cb){
     cc.loaderScene.initWithResources(resources, cb);
 
     cc.director.runScene(cc.loaderScene);
-    
+
     return cc.loaderScene;
 };
