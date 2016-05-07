@@ -15,7 +15,7 @@ var DemoMallItem = DemoWiddgetLayer.extend({
         this.addTouchEventListener(this.touchEventItem, this);
 
         this.Image_bg = mo.gameHelper.getCCSWidget(this.ccsNode, "Image_bg");
-        mo.loadTexture(this.Image_bg, "res/ccs/mall/item_bg.png");
+        mo.gameHelper.loadTexture(this.Image_bg, "UIDemo/res/ccs/mall/item_bg.png");
 
         this.mMallItem = mallItem;
         this.setMallInfo();
@@ -24,6 +24,8 @@ var DemoMallItem = DemoWiddgetLayer.extend({
         this._super();
     },
     touchEventItem : function(sender, type){
+        mo.gameHelper.getIsTouchEnd(type);
+
         if (type == ccui.Widget.TOUCH_ENDED){
             this.Image_bg.setColor(cc.color(255, 255, 255));
             this.setScale(1);

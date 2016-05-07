@@ -2,61 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a55d431-85b5-4857-ad9f-d487486f70b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/btn/BottomBg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/Default/Button_Disable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/btn/activity.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/comon/bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/comon/bg2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/coin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/mall/coin1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/coinBg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/default_man.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/default_woman.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/btn/exchange.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/mall/exchange_item_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/firstChargeIcon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/btn/foward.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/comon/hallBg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/comon/hallBg2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/helpBtn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/mall/item_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/comon/left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/btn/mall.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/messageBtn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/photoBg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/photoBgClipping.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/btn/rank.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/returnBtn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/comon/return_btn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/comon/right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/setBtn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/btn/task.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/userNameBg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/userInfo/vipIcon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/ExchangeLayer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/MainLayer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/MallItem.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/tools/defines.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/widget/demoExchangeItem.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/hall/demoExchangeLayer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/hall/demoHallHeadHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/hall/demoHallHornHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/hall/demoLayer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/widget/demoMallItem.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/widget/demoWeidgetLayer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/files.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/tools/gameHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FruitAttack/src/gameMatrix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/hall/hallBaseLayer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/resource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scene/GameLoadingLayer.js" afterPath="$PROJECT_DIR$/src/scene/GameLoadingLayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FruitAttack/src/gameLayer.js" afterPath="$PROJECT_DIR$/FruitAttack/src/gameLayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scene/menuLayer.js" afterPath="$PROJECT_DIR$/src/scene/menuLayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.json" afterPath="$PROJECT_DIR$/project.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frameworks/runtime-src/proj.ios_mac/Glow.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/frameworks/runtime-src/proj.ios_mac/Glow.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sceneHelper.js" afterPath="$PROJECT_DIR$/src/sceneHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/hall/demoMallLayer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIDemo/src/tools/gameAudio.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cocosstudio/UIDemo/cocosstudio/comon/bg2.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/UIDemo/src/hall/DemoExchangeLayer.js" afterPath="$PROJECT_DIR$/UIDemo/src/hall/demoExchangeLayer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/UIDemo/src/hall/DemoLayer.js" afterPath="$PROJECT_DIR$/UIDemo/src/hall/demoLayer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/UIDemo/src/hall/demoHallHeadHelper.js" afterPath="$PROJECT_DIR$/UIDemo/src/hall/block/demoHallHeadHelper.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/UIDemo/src/hall/demoHallHornHelper.js" afterPath="$PROJECT_DIR$/UIDemo/src/hall/block/demoHallHornHelper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIDemo/res/ccs/comon/bg2.png" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/comon/bg2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocosstudio/UIDemo/cocosstudio/ExchangeLayer.csd" afterPath="$PROJECT_DIR$/cocosstudio/UIDemo/cocosstudio/ExchangeLayer.csd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIDemo/res/ccs/ExchangeLayer.json" afterPath="$PROJECT_DIR$/UIDemo/res/ccs/ExchangeLayer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocosstudio/UIDemo/UIDemo.ccs" afterPath="$PROJECT_DIR$/cocosstudio/UIDemo/UIDemo.ccs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocosstudio/UIDemo/UIDemo.udf" afterPath="$PROJECT_DIR$/cocosstudio/UIDemo/UIDemo.udf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIDemo/src/widget/demoExchangeItem.js" afterPath="$PROJECT_DIR$/UIDemo/src/widget/demoExchangeItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIDemo/src/widget/demoMallItem.js" afterPath="$PROJECT_DIR$/UIDemo/src/widget/demoMallItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIDemo/src/files.js" afterPath="$PROJECT_DIR$/UIDemo/src/files.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIDemo/src/tools/gameHelper.js" afterPath="$PROJECT_DIR$/UIDemo/src/tools/gameHelper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIDemo/src/resource.js" afterPath="$PROJECT_DIR$/UIDemo/src/resource.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Glow.iws" />
@@ -78,41 +40,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="demoLayer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/demoLayer.js">
+      <file leaf-file-name="demoMallItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UIDemo/src/widget/demoMallItem.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="34" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="34" />
+              <caret line="17" column="81" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demoHallHeadHelper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/demoHallHeadHelper.js">
+      <file leaf-file-name="demoHallHeadHelper.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/block/demoHallHeadHelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.38812786">
+              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demoHallHornHelper.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/demoHallHornHelper.js">
+      <file leaf-file-name="demoExchangeItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UIDemo/src/widget/demoExchangeItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.304414">
-              <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="72" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="25" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="demoWeidgetLayer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UIDemo/src/widget/demoWeidgetLayer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -162,23 +124,25 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/UIDemo/src/DemoLayer.js" />
         <option value="$PROJECT_DIR$/UIDemo/src/hall/DemoExchangeLayer.js" />
-        <option value="$PROJECT_DIR$/UIDemo/src/resource.js" />
         <option value="$PROJECT_DIR$/UIDemo/src/widget/demoWeidgetLayer.js" />
         <option value="$PROJECT_DIR$/UIDemo/src/tool/gameHelper.js" />
         <option value="$PROJECT_DIR$/UIDemo/src/tools/defines.js" />
-        <option value="$PROJECT_DIR$/UIDemo/src/tools/gameHelper.js" />
-        <option value="$PROJECT_DIR$/UIDemo/src/widget/demoMallItem.js" />
-        <option value="$PROJECT_DIR$/UIDemo/src/widget/demoExchangeItem.js" />
         <option value="$PROJECT_DIR$/UIDemo/src/hall/hallBaseLayer.js" />
-        <option value="$PROJECT_DIR$/UIDemo/src/hall/demoExchangeLayer.js" />
         <option value="$PROJECT_DIR$/UIDemo/src/widget/demoHeadLayer.js" />
         <option value="$PROJECT_DIR$/UIDemo/src/hall/demoHallHeadHelper.js" />
         <option value="$PROJECT_DIR$/src/scene/GameLoadingLayer.js" />
         <option value="$PROJECT_DIR$/src/sceneHelper.js" />
-        <option value="$PROJECT_DIR$/UIDemo/src/files.js" />
-        <option value="$PROJECT_DIR$/UIDemo/src/hall/demoLayer.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/UIDemo/src/tools/gameAudio.js" />
+        <option value="$PROJECT_DIR$/UIDemo/src/widget/demoExchangeItem.js" />
+        <option value="$PROJECT_DIR$/UIDemo/src/hall/demoExchangeLayer.js" />
+        <option value="$PROJECT_DIR$/UIDemo/src/hall/demoMallLayer.js" />
+        <option value="$PROJECT_DIR$/UIDemo/src/hall/demoLayer.js" />
+        <option value="$PROJECT_DIR$/UIDemo/src/widget/demoMallItem.js" />
+        <option value="$PROJECT_DIR$/UIDemo/src/resource.js" />
+        <option value="$PROJECT_DIR$/UIDemo/src/tools/gameHelper.js" />
         <option value="$PROJECT_DIR$/UIDemo/src/hall/demoHallHornHelper.js" />
+        <option value="$PROJECT_DIR$/UIDemo/src/files.js" />
       </list>
     </option>
   </component>
@@ -295,6 +259,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Glow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Glow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UIDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="hall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -310,6 +296,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="UIDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Glow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Glow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FruitAttack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Glow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Glow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FruitAttack" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,6 +348,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/UIDemo/src/hall/block" />
       <recent name="$PROJECT_DIR$/UIDemo/src/hall" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Scene" />
@@ -408,19 +427,19 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39854014" sideWeight="0.5033278" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329927" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3970803" sideWeight="0.4966722" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329927" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3970803" sideWeight="0.4966722" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -460,27 +479,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/core/event-manager/CCEvent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/menus/CCMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3324937">
-          <caret line="486" column="4" selection-start-line="486" selection-start-column="4" selection-end-line="486" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/js-bindings/bindings/script/jsb_boot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3324937">
-          <caret line="506" column="4" selection-start-line="506" selection-start-column="4" selection-end-line="506" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-html5/cocos2d/render-texture/CCRenderTexture.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8014706">
@@ -625,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FruitAttack/src/gamePatternSprite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42922375">
-          <caret line="154" column="9" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FruitAttack/src/gameLayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11415525">
@@ -674,20 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UIDemo/src/resource.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27272728">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UIDemo/src/widget/demoWeidgetLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42857143">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UIDemo/src/tools/defines.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -695,31 +672,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UIDemo/src/tools/gameHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41095892">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UIDemo/src/widget/demoMallItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="39" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frameworks/js-bindings/bindings/script/jsb_cocos2d.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33246753">
           <caret line="1250" column="0" selection-start-line="1250" selection-start-column="0" selection-end-line="1250" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frameworks/js-bindings/bindings/auto/api/jsb_cocos2dx_auto_api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4103896">
-          <caret line="10582" column="0" selection-start-line="10582" selection-start-column="0" selection-end-line="10582" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -758,20 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/demoExchangeLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UIDemo/src/files.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2739726">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="http://localhost:63342/Glow/UIDemo/res/horn/trumpet2.png">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
@@ -790,39 +732,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.5450237">
           <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/demoHallHeadHelper.js">
+    <entry file="file://$PROJECT_DIR$/FruitAttack/src/gamePatternSprite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.56621003">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="161" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frameworks/js-bindings/bindings/script/jsb_boot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33246753">
+          <caret line="856" column="0" selection-start-line="856" selection-start-column="0" selection-end-line="856" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frameworks/js-bindings/bindings/auto/api/jsb_cocos2dx_auto_api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21558441">
+          <caret line="19323" column="23" selection-start-line="19323" selection-start-column="23" selection-end-line="19323" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/demoLayer.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34285715">
+          <caret line="85" column="56" selection-start-line="85" selection-start-column="56" selection-end-line="85" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35064936">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/demoExchangeLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.39740258">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/tools/gameAudio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6233766">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/demoMallLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15584415">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/tools/gameHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="34" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="34" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/block/demoHallHornHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38356164">
+          <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/widget/demoMallItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="81" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UIDemo/src/widget/demoExchangeItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70776254">
-          <caret line="34" column="9" selection-start-line="24" selection-start-column="30" selection-end-line="34" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="25" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/demoHallHornHelper.js">
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/widget/demoWeidgetLayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.304414">
-          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="72" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/files.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3196347">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIDemo/src/hall/block/demoHallHeadHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38812786">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
           <folding />
         </state>
       </provider>

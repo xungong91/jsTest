@@ -23,6 +23,8 @@ var DemoExchangeItem = DemoWiddgetLayer.extend({
         this._super();
     },
     touchEventItem : function(sender, type){
+        mo.gameHelper.getIsTouchEnd(type);
+
         if (type == ccui.Widget.TOUCH_ENDED){
             this.Image_bg.setColor(cc.color(255, 255, 255));
             this.setScale(1);

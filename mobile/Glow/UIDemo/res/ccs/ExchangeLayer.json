@@ -302,6 +302,49 @@
                     "Tag": 995,
                     "Children": [
                       {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "comon/bg.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 354,
+                        "Scale9Width": 366,
+                        "Scale9Height": 452,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5
+                        },
+                        "Position": {
+                          "X": 537.0,
+                          "Y": 0.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.2133
+                        },
+                        "PreSize": {
+                          "X": 1.0,
+                          "Y": 0.2098
+                        },
+                        "HorizontalEdge": "BothEdge",
+                        "VerticalEdge": "BottomEdge",
+                        "TopMargin": 452.0,
+                        "Tag": 40,
+                        "ActionTag": -935696000,
+                        "Size": {
+                          "X": 1074.0,
+                          "Y": 120.0
+                        },
+                        "Name": "Image_bg2",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
                         "ScrollDirectionType": 0,
                         "ClipAble": true,
                         "BackColorAlpha": 102,
@@ -354,6 +397,143 @@
                         },
                         "Name": "ListView",
                         "ctype": "ListViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "userInfo/coinBg.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 208,
+                        "Scale9Height": 38,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 156.6566,
+                          "Y": 71.2067
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1459,
+                          "Y": 0.1245
+                        },
+                        "PreSize": {
+                          "X": 0.1937,
+                          "Y": 0.0664
+                        },
+                        "LeftMargin": 52.6566,
+                        "RightMargin": 813.3434,
+                        "TopMargin": 481.7933,
+                        "BottomMargin": 52.2067,
+                        "Tag": 41,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "userInfo/coin.png",
+                              "Plist": ""
+                            },
+                            "Scale9Width": 40,
+                            "Scale9Height": 40,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": 20.0,
+                              "Y": 19.0
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PrePosition": {
+                              "X": 0.0962,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 0.1923,
+                              "Y": 1.0526
+                            },
+                            "RightMargin": 168.0,
+                            "TopMargin": -1.0,
+                            "BottomMargin": -1.0,
+                            "Tag": 42,
+                            "ActionTag": -417904407,
+                            "Size": {
+                              "X": 40.0,
+                              "Y": 40.0
+                            },
+                            "Name": "Image_coin",
+                            "ctype": "ImageViewObjectData"
+                          },
+                          {
+                            "FontSize": 20,
+                            "LabelText": "3200",
+                            "OutlineColor": {
+                              "G": 0,
+                              "B": 0
+                            },
+                            "ShadowColor": {
+                              "R": 110,
+                              "G": 110,
+                              "B": 110
+                            },
+                            "ShadowOffsetX": 2.0,
+                            "ShadowOffsetY": -2.0,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": 108.16,
+                              "Y": 18.5522
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PrePosition": {
+                              "X": 0.52,
+                              "Y": 0.4882
+                            },
+                            "PreSize": {
+                              "X": 0.0,
+                              "Y": 0.0
+                            },
+                            "HorizontalEdge": "BothEdge",
+                            "LeftMargin": 62.66,
+                            "RightMargin": 54.34,
+                            "TopMargin": 7.9478,
+                            "BottomMargin": 7.0522,
+                            "Tag": 43,
+                            "ActionTag": -1515744879,
+                            "Size": {
+                              "X": 44.0,
+                              "Y": 23.0
+                            },
+                            "Name": "Text_coin",
+                            "ctype": "TextObjectData"
+                          }
+                        ],
+                        "ActionTag": 449141623,
+                        "Size": {
+                          "X": 208.0,
+                          "Y": 38.0
+                        },
+                        "Name": "Image_coinBg",
+                        "ctype": "ImageViewObjectData"
                       }
                     ],
                     "ActionTag": 1949565680,
@@ -393,7 +573,9 @@
       "UsedResources": [
         "comon/bg.png",
         "comon/return_btn.png",
-        "Default/Button_Disable.png"
+        "Default/Button_Disable.png",
+        "userInfo/coin.png",
+        "userInfo/coinBg.png"
       ],
       "ctype": "GameProjectData"
     }

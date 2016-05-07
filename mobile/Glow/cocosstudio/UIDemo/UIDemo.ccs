@@ -10,7 +10,6 @@
           <Image Name="hallBg.png" />
           <Image Name="return_btn.png" />
           <Image Name="bg.png" />
-          <Image Name="bg2.png" />
           <Image Name="hallBg2.png" />
         </Folder>
         <Folder Name="btn">

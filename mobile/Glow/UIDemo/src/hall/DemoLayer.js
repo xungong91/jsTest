@@ -28,7 +28,10 @@ var DemoLayer = HallBaseLayer.extend({
         this.addChild(this.ccsNode);
         this.resetSize(this.ccsNode);
 
+        //兑换
         ccui.helper.seekWidgetByName(this.ccsNode, "Button_exchange").addTouchEventListener(this.touchEventExchange, this);
+        //商城
+        ccui.helper.seekWidgetByName(this.ccsNode, "Button_mall").addTouchEventListener(this.touchEventMall, this);
 
         this.Image_bg = ccui.helper.seekWidgetByName(this.ccsNode, "Image_bg");
         this.Image_bg2 = mo.gameHelper.getCCSWidget(this.ccsNode, "Image_bg2");
@@ -46,9 +49,16 @@ var DemoLayer = HallBaseLayer.extend({
         this.mDemoHallHornHelper.init(mo.gameHelper.getCCSWidget(this.ccsNode, "Image_horn"));
     },
     touchEventExchange : function (sender, type){
-        if (type == ccui.Widget.TOUCH_ENDED){
+        if (mo.gameHelper.getIsTouchEnd(type)){
             this.hideLayer(function(){
                 this.addChild(new DemoExchangeLayer());
+            }, this);
+        }
+    },
+    touchEventMall : function (sender, type){
+        if (mo.gameHelper.getIsTouchEnd(type)){
+            this.hideLayer(function(){
+                this.addChild(new DemoMallLayer());
             }, this);
         }
     },

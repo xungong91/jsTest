@@ -11,7 +11,8 @@ var GameHelper = function(){
 
     that.loadTexture = function(image, file){
         image.loadTexture(file);
-        var size = cc.director.getTextureCache().getTextureForKey(file).getContentSize();
+        var size = image.getVirtualRendererSize();
+        cc.log("size width:" + size.width + "height:" + size.height);
         image.setContentSize(size);
         return size;
     };
@@ -19,6 +20,13 @@ var GameHelper = function(){
     that.setTextString = function(text, str){
         text.setString(str);
         text.setContentSize(text.getAutoRenderSize());
+    };
+
+    that.getIsTouchEnd = function(type){
+        if (type == ccui.Widget.TOUCH_BEGAN){
+            mo.gameAudio.playClick();
+        }
+        return type == ccui.Widget.TOUCH_ENDED;
     };
 
     return that;

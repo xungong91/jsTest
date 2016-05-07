@@ -81,7 +81,7 @@ var DemoHallHornHelper = function(){
 
     //打开喇叭面变
     that.touchEventOpen = function(sender, type){
-        if (type == ccui.Widget.TOUCH_ENDED){
+        if (mo.gameHelper.getIsTouchEnd(type)){
             //测试播放
             var horns = [
                 "系统的消息今晚有暴雨，记得回家收衣服",

@@ -57,6 +57,16 @@
                   <AbstractNodeData Name="Image_bg" ActionTag="1949565680" Tag="995" IconVisible="False" LeftMargin="-537.0000" RightMargin="-537.0000" TopMargin="-256.0000" BottomMargin="-316.0000" Scale9Width="1074" Scale9Height="572" ctype="ImageViewObjectData">
                     <Size X="1074.0000" Y="572.0000" />
                     <Children>
+                      <AbstractNodeData Name="Image_bg2" ActionTag="-935696000" Tag="40" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BottomEdge" TopMargin="452.0000" Scale9Enable="True" LeftEage="354" RightEage="354" BottomEage="120" Scale9OriginX="354" Scale9Width="366" Scale9Height="452" ctype="ImageViewObjectData">
+                        <Size X="1074.0000" Y="120.0000" />
+                        <AnchorPoint ScaleX="0.5000" />
+                        <Position X="537.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5000" Y="0.2133" />
+                        <PreSize X="1.0000" Y="0.2098" />
+                        <FileData Type="Normal" Path="comon/bg.png" Plist="" />
+                      </AbstractNodeData>
                       <AbstractNodeData Name="ListView" ActionTag="-526558671" Tag="23" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="37.0000" RightMargin="37.0000" TopMargin="53.8000" BottomMargin="168.2000" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" ScrollDirectionType="0" ctype="ListViewObjectData">
                         <Size X="1000.0000" Y="350.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -69,6 +79,39 @@
                         <FirstColor A="255" R="150" G="150" B="255" />
                         <EndColor A="255" R="255" G="255" B="255" />
                         <ColorVector ScaleY="1.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Image_coinBg" ActionTag="449141623" Tag="41" IconVisible="False" LeftMargin="52.6566" RightMargin="813.3434" TopMargin="481.7933" BottomMargin="52.2067" Scale9Width="208" Scale9Height="38" ctype="ImageViewObjectData">
+                        <Size X="208.0000" Y="38.0000" />
+                        <Children>
+                          <AbstractNodeData Name="Image_coin" ActionTag="-417904407" Tag="42" IconVisible="False" RightMargin="168.0000" TopMargin="-1.0000" BottomMargin="-1.0000" Scale9Width="40" Scale9Height="40" ctype="ImageViewObjectData">
+                            <Size X="40.0000" Y="40.0000" />
+                            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                            <Position X="20.0000" Y="19.0000" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="255" G="255" B="255" />
+                            <PrePosition X="0.0962" Y="0.5000" />
+                            <PreSize X="0.1923" Y="1.0526" />
+                            <FileData Type="Normal" Path="userInfo/coin.png" Plist="" />
+                          </AbstractNodeData>
+                          <AbstractNodeData Name="Text_coin" ActionTag="-1515744879" Tag="43" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="62.6600" RightMargin="54.3400" TopMargin="7.9478" BottomMargin="7.0522" FontSize="20" LabelText="3200" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="44.0000" Y="23.0000" />
+                            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                            <Position X="108.1600" Y="18.5522" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="255" G="255" B="255" />
+                            <PrePosition X="0.5200" Y="0.4882" />
+                            <PreSize X="0.0000" Y="0.0000" />
+                            <OutlineColor A="255" R="255" G="0" B="0" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="156.6566" Y="71.2067" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1459" Y="0.1245" />
+                        <PreSize X="0.1937" Y="0.0664" />
+                        <FileData Type="Normal" Path="userInfo/coinBg.png" Plist="" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

@@ -1,8 +1,8 @@
 /**
- * Created by gongxun on 16/5/3.
+ * Created by gongxun on 16/5/7.
  */
 
-var DemoExchangeLayer = HallBaseLayer.extend({
+var DemoMallLayer = HallBaseLayer.extend({
     ctor: function () {
         this._super();
 
@@ -24,7 +24,7 @@ var DemoExchangeLayer = HallBaseLayer.extend({
         ListView.removeAllItems();
         var exchangeItems = mo.defines.getExchangeItems();
         for(var i = 0; i < exchangeItems.length; i++){
-            var item = new DemoExchangeItem(exchangeItems[i]);
+            var item = new DemoMallItem(exchangeItems[i]);
             ListView.pushBackCustomItem(item);
         }
     },
